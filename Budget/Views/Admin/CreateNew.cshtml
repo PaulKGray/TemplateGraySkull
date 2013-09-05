@@ -1,0 +1,29 @@
+﻿@model Budget.Models.StandardItem
+
+@{
+    ViewBag.Title = "CreateNew";
+}
+
+<h2>Create New</h2>
+
+@using (Html.BeginForm("CreateNew", "Admin", FormMethod.Post)) {
+
+    @Html.ValidationSummary();
+
+    @Html.LabelFor(x => x.Name);
+    @Html.TextBoxFor(x=>x.Name);
+
+    @Html.LabelFor(x => x.Type);
+    @Html.DropDownListFor(n => n.Type, new SelectList(Budget.Models.ItemTypeList.ItemTypes, "Type","name"));
+
+    @Html.LabelFor(x => x.Description); 
+    @Html.TextAreaFor(x => x.Description);
+ 
+    <div>
+        <input type="submit" value="Add Item" />
+        @Html.ActionLink("Cancel", "Index")
+    </div>
+
+    
+
+}

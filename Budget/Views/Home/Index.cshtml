@@ -1,0 +1,54 @@
+﻿@model Budget.Models.HomeModel
+
+<h1>The App</h1>
+
+<p>Its time to get you started and create your budget</p>
+
+<p>This is the basic getting started page if you know the full details of your spending lets js</p>
+
+
+    <h2>Personal Details</h2>
+
+   
+@using (Html.BeginForm("Index","Home", FormMethod.Post))
+{
+
+    @Html.ValidationSummary(true)
+    
+    
+    <h2>Income</h2>
+     
+    for (var i = 0; i < Model.IncomeItems.Count();i++ )
+    {
+
+       <div>    
+       @Html.TextBoxFor(x => x.IncomeItems[i].Name, new { @readonly = true })
+        £
+       @Html.TextBoxFor(x => x.IncomeItems[i].DefaultValue)
+       @Html.HiddenFor(x => x.IncomeItems[i].StandardItemId)
+       </div> 
+       
+    };
+ 
+    <h2>Expenditure</h2>
+    
+     
+    for (var i = 0; i < Model.ExpenseItems.Count();i++ )
+    {
+        
+       <div>    
+       @Html.TextBoxFor(x => x.ExpenseItems[i].Name, new { @readonly = true })
+        £
+       @Html.TextBoxFor(x => x.ExpenseItems[i].DefaultValue)
+       @Html.HiddenFor(x => x.ExpenseItems[i].StandardItemId)
+       </div> 
+       
+    };
+        
+   <input type="submit" value="Proceed" />
+    
+    
+    
+}
+
+

@@ -1,0 +1,32 @@
+﻿@model Budget.Models.StandardItem
+@{
+    ViewBag.Title = "EditStandardItem";
+}
+
+<h2>Edit Item</h2>
+
+<p>This is the item please make amendments below</p>
+
+
+@using (Html.BeginForm("EditStandardItem", "Admin", FormMethod.Post))
+{
+    
+    @Html.ValidationSummary();
+
+    @Html.LabelFor(x => x.Name);
+    @Html.TextBoxFor(x => x.Name);
+
+    @Html.LabelFor(x=>x.Type)
+    @Html.DropDownListFor(n => n.Type, new SelectList(Budget.Models.ItemTypeList.ItemTypes, "Type", "name"));
+
+    @Html.LabelFor(x => x.Description);
+    @Html.TextAreaFor(x => x.Description);
+      
+    <div class="control">
+        <input type="submit" value="Edit Item" />
+        @Html.ActionLink("Delete", "DeleteStandardItem", new { ID=Model.id })
+        @Html.ActionLink("Cancel", "Index")
+    </div>
+   
+ 
+}

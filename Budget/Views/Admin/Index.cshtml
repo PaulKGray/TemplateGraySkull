@@ -1,0 +1,32 @@
+﻿@model Budget.Models.AdminModel
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Standard Items</h2>
+
+ @Html.ActionLink("Add New Standard Item", "CreateNew", "Admin")
+
+
+@{ if (Model.StandardItems.Count == 0) { 
+       
+       <h2>Sorry No Items Available</h2>
+       
+} else {
+
+       
+       
+    foreach (var item in Model.StandardItems)
+    {
+        
+        <p>
+            @item.Name 
+            @item.Type     
+            @Html.ActionLink("Edit", "EditStandardItem", "Admin", new { ID=item.StandardItemId }, null)
+        </p>
+        
+    }
+           
+}}
