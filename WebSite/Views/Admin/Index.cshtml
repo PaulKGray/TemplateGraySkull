@@ -7,8 +7,9 @@
 
 <h2>Standard Items</h2>
 
- @Html.ActionLink("Add New Standard Item", "CreateNew", "Admin")
+@Html.ActionLink("Add New Standard Item", "CreateNew", "Admin")
 
+@TempData["Message"] 
 
 @{ if (Model.ParentItems.Count == 0)
 	 { 
@@ -17,11 +18,12 @@
        
 } else {
 
+		 
+		 
 
 
 	foreach (var item in Model.ParentItems)
-    {
-        
+    {        
         <p>
             @item.Name  
             @Html.ActionLink("Edit", "EditParentItem", "Admin", new { ID=item.ParentItemid }, null)

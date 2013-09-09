@@ -55,6 +55,8 @@ namespace Template.Controllers
 							var parentItem = new ParentItem(item.Name);
 							parentItem.Name = item.Name;
 
+							TempData["Message"] = string.Format("{0} has been added to your cart!", item.Name);
+
 							_ParentItemService.CreateParent(parentItem);
 							
 
