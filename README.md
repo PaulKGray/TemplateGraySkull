@@ -1,6 +1,6 @@
-Budget.Domain
+Template Gray Skull
 =============
 
-Buit
+MVC Onion Architecture Template.
 
-This is a first go at templating
+

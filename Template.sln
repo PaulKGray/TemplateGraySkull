@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Services", "Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Repository", "Repository\Template.Repository.csproj", "{78C7E99C-9054-4255-B35F-D417AAAFB24B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template","WebSite\Template.csproj", "{4FD34974-FB22-4D23-8842-9F6160BADF68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "WebSite\Template.csproj", "{4FD34974-FB22-4D23-8842-9F6160BADF68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gitItems", "gitItems", "{B62687D9-1662-46AE-A0B1-6FDD262F36E1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
