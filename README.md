@@ -1,4 +1,4 @@
-
+![alt tag](https://github.com/PaulKGray/TemplateGraySkull/blob/master/WebSite/Images/Grayskull.jpg)
 
 Template Gray Skull
 =============
