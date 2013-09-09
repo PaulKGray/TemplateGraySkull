@@ -1,6 +1,6 @@
 ![alt tag](https://raw.github.com/PaulKGray/TemplateGraySkull/master/WebSite/Images/Grayskull.jpg)
 
-Template Gray Skull
+TemplateGraySkull
 =============
 
 MVC Onion Architecture Template.
