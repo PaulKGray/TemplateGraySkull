@@ -310,10 +310,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\DisplayTemplates\BudgetItemModel.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\CreateNew.cshtml" />
-    <Content Include="Views\Admin\EditStandardItem.cshtml" />
+    <Content Include="Views\Admin\CreateParentItem.cshtml" />
+    <Content Include="Views\Admin\EditParentItem.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\BudgetItemModel.cshtml" />
-    <Content Include="Views\Budget\BudgetSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

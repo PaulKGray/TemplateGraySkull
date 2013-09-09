@@ -19,7 +19,7 @@ namespace Template.Controllers
 
 				public AdminController(IParentItemService parentItemService)
         {
-					_ParentItemService = parentItemService
+					_ParentItemService = parentItemService;
 				}
             
         public ActionResult Index()
@@ -52,7 +52,7 @@ namespace Template.Controllers
 
             if (ModelState.IsValid) {
 							 
-							var parentItem = new ParentItem();
+							var parentItem = new ParentItem(item.Name);
 							parentItem.Name = item.Name;
 
 							_ParentItemService.CreateParent(parentItem);
@@ -83,7 +83,7 @@ namespace Template.Controllers
             if (ModelState.IsValid)
             {
 
-							var parentItem = new ParentItem();
+							var parentItem = new ParentItem(item.Name);
 							parentItem.Name = item.Name;
 							parentItem.ParentItemid = item.ParentItemid;
 

@@ -8,7 +8,7 @@ using FluentNHibernate.Mapping;
 
 namespace Template.Repository.Mappings
 {
-    class ParentItemMap : ClassMap<ParentItem>
+    public class ParentItemMap : ClassMap<ParentItem>
     {
         public ParentItemMap()
         {

@@ -19,8 +19,9 @@ namespace Template.Domain
             
         }
 
-        public ParentItem()
+        public ParentItem(string name)
         {
+					this.Name = name;
 					ChildItems = new List<ChildItem>();
         }
 

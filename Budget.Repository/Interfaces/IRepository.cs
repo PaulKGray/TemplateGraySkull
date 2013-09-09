@@ -12,7 +12,7 @@ namespace Template.Repository.Interfaces
         TEntity Find(Expression<Func<TEntity, bool>> criteria);
         TEntity FindBy(int id);
         TEntity Add(TEntity entity);
-        TEntity Add(IList<TEntity> items);
+        IList<TEntity> Add(IList<TEntity> items);
         bool Update(TEntity entity);
         bool Delete(TEntity entity);
         bool Delete(IList<TEntity> entities);

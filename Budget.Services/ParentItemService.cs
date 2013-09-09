@@ -22,8 +22,6 @@ namespace Template.Services
 
         public ParentItem CreateParent(ParentItem parent)
         {
-            parent = new ParentItem();
-
             _ParentRepository.Add(parent);
 
             return parent;
@@ -35,20 +33,12 @@ namespace Template.Services
             return parentItem;
         }
 
-        public bool SaveParentItem(ParentItem parentitem)
+        public void SaveParentItem(ParentItem parentitem)
         {
-            var result = _ParentRepository.Update(parentitem);
-            return result;
+            _ParentRepository.Update(parentitem);
         }
 
-
-        public void  SaveParentItem(ParentItem parent)
-        {
-					_ParentRepository.Update(parent);
-        }
-
-
-				public IList<ParentItem> GetAllParentItem()
+ 				public IList<ParentItem> GetAllParentItem()
 				{
 					return _ParentRepository.FindAll();
 				}

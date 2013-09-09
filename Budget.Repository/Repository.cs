@@ -24,7 +24,7 @@ namespace Template.Repository
             return entity;
         }
 
-        public IList<T> Add(System.Collections.Generic.IList<T> items)
+        public IList<T> Add(IList<T> items)
         {
             foreach (T item in items)
             {
@@ -45,7 +45,7 @@ namespace Template.Repository
             return true;
         }
 
-        public bool Delete(System.Collections.Generic.IList<T> entities)
+        public bool Delete(IList<T> entities)
         {
             foreach (T entity in entities)
             {
@@ -87,10 +87,6 @@ namespace Template.Repository
 
 
 
-
-        T IRepository<T>.Add(IList<T> items)
-        {
-            throw new NotImplementedException();
-        }
-    }
+				
+		}
 }
