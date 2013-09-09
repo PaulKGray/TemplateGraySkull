@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Template.Controllers.Actionfilters;
+using Template.Domain;
 using Template.Models;
 using Template.Services.Interfaces;
 
@@ -14,11 +15,11 @@ namespace Template.Controllers
         //
         // GET: /Admin/
 
-        private IStandardItemService _StandardItemService;
+        private IParentItemService _ParentItemService;
 
-        public AdminController(IStandardItemService standardItemService)
+				public AdminController(IParentItemService standardItemService)
         {
-            _StandardItemService = standardItemService;
+					_ParentItemService = standardItemService;
         }
             
         public ActionResult Index()
@@ -33,8 +34,7 @@ namespace Template.Controllers
         {
             var adminModel = new AdminModel();
 
-            adminModel.StandardItems = _StandardItemService.GetAllStandardITems();
-
+            adminModel.ParentItems = _ParentItemService.GetAllParentItem();
 
             return adminModel;
 
@@ -43,8 +43,8 @@ namespace Template.Controllers
         [HttpGet]
         public ActionResult CreateNew()
         {
-            var StandardItem = new Template.Models.ParentItemModel();
-            return View(StandardItem);
+            var parentItem = new ParentItemModel();
+						return View(parentItem);
         }
 
         [HttpPost]
@@ -53,8 +53,11 @@ namespace Template.Controllers
             if (ModelState.IsValid) {
 
             // needs to assign correct enum for expense type.
-            var theNewStandardItem = new Template.Domain.BudgetStandardItem(item.Name, item.Type, item.Description);
-            _StandardItemService.AddNewStandardItem(theNewStandardItem);
+							var parentItem = new ParentItem();
+							parentItem.Name = item.Name;
+
+							_ParentItemService.CreateParent(parentItem);
+							
 
             return RedirectToAction("Index");
 
@@ -66,15 +69,12 @@ namespace Template.Controllers
         [HttpGet]
         public ActionResult EditStandardItem(int id)
         {
-            var theStandardItem = _StandardItemService.GetStandardItem(id);
-            var theModelStandardItem = new ParentItemModel();
-           
-            theModelStandardItem.Name = theStandardItem.Name;
-            theModelStandardItem.id = theStandardItem.StandardItemId;
-            theModelStandardItem.Description = theStandardItem.Description;
-            // to deal with
-            theModelStandardItem.Type = Domain.ItemType.Expense;
-            return View(theModelStandardItem);
+					var parentItem = _ParentItemService.GetParentItem(id);
+					var parentItemModel = new ParentItemModel();
+
+					parentItemModel.Name = parentItem.Name;
+
+					return View(parentItemModel);
         }
 
         [Transaction]
@@ -84,12 +84,13 @@ namespace Template.Controllers
             if (ModelState.IsValid)
             {
 
-                var DomStandardItem = new Template.Domain.BudgetStandardItem(item.Name, item.Type, item.Description);
-                DomStandardItem.StandardItemId = item.id;
+							var parentItem = new ParentItem();
+							parentItem.Name = item.Name;
+							parentItem.ParentItemid = item.ParentItemid;
 
-                _StandardItemService.EditStandardItem(DomStandardItem);
+							_ParentItemService.SaveParentItem(parentItem);
 
-                return RedirectToAction("Index");
+              return RedirectToAction("Index");
             }
 
             return View(item);
@@ -99,9 +100,9 @@ namespace Template.Controllers
         [HttpGet]
         public ActionResult DeleteStandardItem(int id) {
 
-            _StandardItemService.DeleteStandardItem(id);
+					_ParentItemService.DeleteParentItem(id);
 
-            return RedirectToAction("Index");
+          return RedirectToAction("Index");
         }
 
     }

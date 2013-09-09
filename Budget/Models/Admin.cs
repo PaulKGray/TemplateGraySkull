@@ -9,12 +9,14 @@ namespace Template.Models
     public class AdminModel
     {
 
+			public IList<ParentItem> ParentItems;
+
         public AdminModel()
         {
-
+					ParentItems = new List<ParentItem>();
         }
 
-        public IList<ParentItem> ParentItems;
+
 
 
     }

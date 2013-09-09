@@ -9,7 +9,9 @@ namespace Template.Domain
     public class ChildItem
     {
         public virtual int ChildItemId { get; set; }
-        public ParentItem Parent { get; set; }
+        public virtual ParentItem Parent { get; set; }
+
+				public virtual string Name { get; set; }
 
         protected ChildItem()
         {

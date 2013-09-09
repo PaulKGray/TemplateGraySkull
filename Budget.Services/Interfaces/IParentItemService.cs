@@ -9,8 +9,10 @@ namespace Template.Services.Interfaces
 {
     public interface IParentItemService
     {
-        ParentItem CreateParent();
+			ParentItem CreateParent(ParentItem parent);
         ParentItem GetParentItem(int ParentItemId);
         void SaveParentItem(ParentItem budget);
+				IList<ParentItem> GetAllParentItem();
+				void DeleteParentItem(int id);
     }
 }

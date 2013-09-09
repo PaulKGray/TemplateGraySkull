@@ -13,13 +13,13 @@ namespace Template.Controllers
     public class HomeController : Controller
     {
 
-        private IParentItemService _BudgetService;
-        private IChildItemService _BudgetItemService;
+        private IParentItemService _ParentItemService;
+				private IChildItemService _ChildItemService;
 
         public HomeController(IParentItemService parentItemService, IChildItemService childItemService)
         {
-            _BudgetService = budgetService;
-            _BudgetItemService = budgetItemService;
+					_ParentItemService = parentItemService;
+					_ChildItemService = childItemService;
         }
             
         [HttpGet]
@@ -28,32 +28,28 @@ namespace Template.Controllers
 
             var model = new HomeModel();
 
-            var standarditems = _StandardItemService.GetAllStandardITems();
+						var parentItems = _ParentItemService.GetAllParentItem();
 
-            foreach (var item in standarditems)
+						foreach (var item in parentItems)
             {
-                var modelitem = new ParentItemModel();
-                modelitem.Name = item.Name;
-                modelitem.Type = item.Type;
-                modelitem.Description = item.Description;
-                modelitem.id = item.StandardItemId;
+                var parentItem = new ParentItemModel();
+								parentItem.ParentItemid = item.ParentItemid;
+								parentItem.Name = item.Name;
 
+								foreach (var childItem in item.ChildItems)
+								{
+									
+									var newChildItem = new ChildItemModel();
+									newChildItem.ChildItemId = childItem.ChildItemId;
+									newChildItem.Name = childItem.Name;
 
-                var budgetItemModel = new BudgetItemModel(modelitem);
+									parentItem.ChildItems.Add(newChildItem);
 
-                budgetItemModel.Name = item.Name;
-                budgetItemModel.StandardItemId = item.StandardItemId;
+								}
 
-                if (item.Type == Domain.ItemType.Expense)
-                {
-                    model.ExpenseItems.Add(budgetItemModel);
-                }
-                else
-                {
-                    model.IncomeItems.Add(budgetItemModel);
-                }
+							  model.ParentItems.Add(parentItem);
+  
             }
-
 
             return View(model);
         }
@@ -65,30 +61,7 @@ namespace Template.Controllers
             if (ModelState.IsValid)
             {
 
-                var budget=_BudgetService.CreateBudget("Temp");
-
-                IList<BudgetItem> itemsToAdd = new List<BudgetItem>();
-
-                foreach (var item in model.ExpenseItems)
-                {
-                    var theStandardItem = _StandardItemService.GetStandardItem(item.StandardItemId);
-                    var newItem = new BudgetItem(budget, theStandardItem, item.DefaultValue, item.Name, ItemType.Expense);
-                    budget.AddItem(newItem);
-                }
-
-                foreach (var incomeItems in model.IncomeItems) 
-                {
-                    var theIncomeStandardItem = _StandardItemService.GetStandardItem(incomeItems.StandardItemId);
-                    var newIncomeItem = new BudgetItem(budget, theIncomeStandardItem, incomeItems.DefaultValue, incomeItems.Name, ItemType.Income);
-                    budget.AddItem(newIncomeItem);
-                }
-
-
-                _BudgetService.SaveBudget(budget);
-
-                //Look at passing the budget tp the next view via temp data
-
-                return RedirectToAction("NextSteps");
+  
 
             }
  

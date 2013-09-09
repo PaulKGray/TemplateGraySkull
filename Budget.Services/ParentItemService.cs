@@ -20,9 +20,9 @@ namespace Template.Services
             _ParentRepository = repository;
         }
 
-        public ParentItem CreateParent()
+        public ParentItem CreateParent(ParentItem parent)
         {
-            var parent = new ParentItem();
+            parent = new ParentItem();
 
             _ParentRepository.Add(parent);
 
@@ -42,9 +42,22 @@ namespace Template.Services
         }
 
 
-        public void  SaveParentItem(ParentItem budget)
+        public void  SaveParentItem(ParentItem parent)
         {
-            throw new NotImplementedException();
+					_ParentRepository.Update(parent);
         }
-    }
+
+
+				public IList<ParentItem> GetAllParentItem()
+				{
+					return _ParentRepository.FindAll();
+				}
+
+
+				public void DeleteParentItem(int id)
+				{
+					var parentItem = _ParentRepository.FindBy(id);
+					_ParentRepository.Delete(parentItem);
+				}
+		}
 }

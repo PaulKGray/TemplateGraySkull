@@ -10,7 +10,9 @@ namespace Template.Domain
     {
         public virtual int ParentItemid { get; set; }
 
-        public virtual IList<ChildItem> Children { get; set; }
+				public virtual string Name { get; set; }
+
+        public virtual IList<ChildItem> ChildItems { get; set; }
 
         protected ParentItem(){
 
@@ -19,13 +21,15 @@ namespace Template.Domain
 
         public ParentItem()
         {
-            Children = new List<ChildItem>();
+					ChildItems = new List<ChildItem>();
         }
 
 
-        public void AddChildItem(ChildItem childitem) { 
-        
-        }
+        public void AddChildItem(ChildItem childitem) {
+
+					this.ChildItems.Add(childitem);
+					
+				}
 
 
       
