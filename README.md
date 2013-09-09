@@ -43,8 +43,13 @@ This is where the core functionality will sit. It deals with making the calls to
 **Technologies Used**
 - Ninject (dependency resolution)
 
-MVC site
+MVC Web Site
 --------------
+This is a straight up MVC site it should have no logic this should be in the service
+
+*Need to look at how to handle the mappings effectively between view models and domain models*
+
+**Technologies Used**
 - Ninject
 - MVC4
 
