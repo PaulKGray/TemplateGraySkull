@@ -13,7 +13,7 @@ namespace Template.Models
 
         public HomeModel()
         {
-						ParentItems = new List<ParentItemModel>();
+			ParentItems = new List<ParentItemModel>();
         }
     }
 }

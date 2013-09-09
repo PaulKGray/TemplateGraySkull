@@ -10,19 +10,19 @@ namespace Template.Models
 {
     public class ParentItemModel
     {
-			public int ParentItemid { get; set; }
+	    public int ParentItemid { get; set; }
 
-        [DisplayName("Item Name")]
+        [DisplayName("Parent Item Name")]
         [StringLength(160)]
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
 
-				public IList<ChildItemModel> ChildItems;
+		public IList<ChildItemModel> ChildItems;
 
         public ParentItemModel()
         {
-					ChildItems = new List<ChildItemModel>();
+			ChildItems = new List<ChildItemModel>();
         }
 
       

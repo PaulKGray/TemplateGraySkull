@@ -12,11 +12,10 @@ namespace Template.Repository.Mappings
     {
         public ChildItemMap()
         {
-            Table("ChildItem");
-            Id(x => x.ChildItemId);
-						Map(x => x.Name);
-            HasOne(x => x.Parent);
-
+                Table("ChildItem");
+                Id(x => x.ChildItemId);
+                Map(x => x.Name);
+                References(x=>x.Parent);
         }
     }
 }

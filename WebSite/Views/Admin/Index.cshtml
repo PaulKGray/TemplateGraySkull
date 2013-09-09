@@ -5,9 +5,9 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Standard Items</h2>
+<h2>Parent Items</h2>
 
-@Html.ActionLink("Add New Standard Item", "CreateNew", "Admin")
+@Html.ActionLink("Add Parent Item", "CreateParentItem", "Admin")
 
 @TempData["Message"] 
 
@@ -24,10 +24,27 @@
 
 	foreach (var item in Model.ParentItems)
     {        
-        <p>
+        <div>
             @item.Name  
             @Html.ActionLink("Edit", "EditParentItem", "Admin", new { ID=item.ParentItemid }, null)
-        </p>
+
+            @if (item.ChildItems.Count > 0 ){
+            
+                <ul>
+                
+                @foreach (var childItem in item.ChildItems)
+	            {
+		            <li>  
+                        @childItem.Name
+                    </li>
+	            }
+
+                </ul>
+            
+            }
+
+
+        </div>
         
     }
            

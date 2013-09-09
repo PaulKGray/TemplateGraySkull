@@ -11,7 +11,7 @@ namespace Template.Domain
         public virtual int ChildItemId { get; set; }
         public virtual ParentItem Parent { get; set; }
 
-				public virtual string Name { get; set; }
+		public virtual string Name { get; set; }
 
         protected ChildItem()
         {
