@@ -55,4 +55,6 @@ This is a straight up MVC site it should have no logic this should be in the ser
 - Ninject
 - MVC4
 
+HTML5 boiler plate 
 
+http://html5boilerplate.com/
