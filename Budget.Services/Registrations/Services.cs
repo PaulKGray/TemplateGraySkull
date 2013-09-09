@@ -19,13 +19,9 @@ namespace Template.Services.Registrations
         {
             
             // services
-
             
-            kernel.Bind<IParentService>().To<BudgetService>();
-            kernel.Bind<IBudgetPeriodService>().To<BudgetPeriodService>();
-            kernel.Bind<IChildItemService>().To<BudgetItemService>();
-            kernel.Bind<IBudgetPeriodItemService>().To<BudgetPeriodItemService>();
-            kernel.Bind<IStandardItemService>().To<StandardItemService>();
+            kernel.Bind<IParentItemService>().To<ParentItemService>();
+            kernel.Bind<IChildItemService>().To<ChildItemService>();
 
             // repositories
 

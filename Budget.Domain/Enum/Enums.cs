@@ -7,17 +7,7 @@ using System.Threading.Tasks;
 namespace Template.Domain
 {
 
-    public enum ItemType
-    {
-        Expense,
-        Income
-    }
 
-    public enum PeriodType
-    { 
-        Monthly,
-        Weekly
-    }
 
 
 }

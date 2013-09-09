@@ -14,6 +14,7 @@ namespace Template.Repository.Mappings
         {
             Table("ChildItem");
             Id(x => x.ChildItemId);
+						Map(x => x.Name);
             HasOne(x => x.Parent);
 
         }

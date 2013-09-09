@@ -1,4 +1,4 @@
-﻿@model Budget.Models.AdminModel
+﻿@model Template.Models.AdminModel
 
 
 @{
@@ -10,21 +10,21 @@
  @Html.ActionLink("Add New Standard Item", "CreateNew", "Admin")
 
 
-@{ if (Model.StandardItems.Count == 0) { 
+@{ if (Model.ParentItems.Count == 0)
+	 { 
        
        <h2>Sorry No Items Available</h2>
        
 } else {
 
-       
-       
-    foreach (var item in Model.StandardItems)
+
+
+	foreach (var item in Model.ParentItems)
     {
         
         <p>
-            @item.Name 
-            @item.Type     
-            @Html.ActionLink("Edit", "EditStandardItem", "Admin", new { ID=item.StandardItemId }, null)
+            @item.Name  
+            @Html.ActionLink("Edit", "EditParentItem", "Admin", new { ID=item.ParentItemid }, null)
         </p>
         
     }

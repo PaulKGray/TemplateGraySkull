@@ -17,10 +17,10 @@ namespace Template.Controllers
 
         private IParentItemService _ParentItemService;
 
-				public AdminController(IParentItemService standardItemService)
+				public AdminController(IParentItemService parentItemService)
         {
-					_ParentItemService = standardItemService;
-        }
+					_ParentItemService = parentItemService
+				}
             
         public ActionResult Index()
         {
@@ -41,18 +41,17 @@ namespace Template.Controllers
         }
 
         [HttpGet]
-        public ActionResult CreateNew()
+				public ActionResult CreateParentItem()
         {
             var parentItem = new ParentItemModel();
 						return View(parentItem);
         }
 
         [HttpPost]
-        public ActionResult CreateNew(ParentItemModel item) {
+        public ActionResult CreateParentItem(ParentItemModel item) {
 
             if (ModelState.IsValid) {
-
-            // needs to assign correct enum for expense type.
+							 
 							var parentItem = new ParentItem();
 							parentItem.Name = item.Name;
 
@@ -67,7 +66,7 @@ namespace Template.Controllers
         }
 
         [HttpGet]
-        public ActionResult EditStandardItem(int id)
+        public ActionResult EditParentItem(int id)
         {
 					var parentItem = _ParentItemService.GetParentItem(id);
 					var parentItemModel = new ParentItemModel();
@@ -79,7 +78,7 @@ namespace Template.Controllers
 
         [Transaction]
         [HttpPost]
-        public ActionResult EditStandardItem(ParentItemModel item)
+        public ActionResult EditParentItem(ParentItemModel item)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +97,7 @@ namespace Template.Controllers
 
         [Transaction]
         [HttpGet]
-        public ActionResult DeleteStandardItem(int id) {
+        public ActionResult DeleteParentItem(int id) {
 
 					_ParentItemService.DeleteParentItem(id);
 

@@ -1,4 +1,4 @@
-﻿@model Budget.Models.HomeModel
+﻿@model Template.Models.HomeModel
 
 <h1>The App</h1>
 
@@ -18,32 +18,15 @@
     
     <h2>Income</h2>
      
-    for (var i = 0; i < Model.IncomeItems.Count();i++ )
+	for (var i = 0; i < Model.ParentItems.Count(); i++)
     {
 
        <div>    
-       @Html.TextBoxFor(x => x.IncomeItems[i].Name, new { @readonly = true })
-        £
-       @Html.TextBoxFor(x => x.IncomeItems[i].DefaultValue)
-       @Html.HiddenFor(x => x.IncomeItems[i].StandardItemId)
+       @Html.TextBoxFor(x => x.ParentItems[i].Name, new { @readonly = true })
        </div> 
        
     };
- 
-    <h2>Expenditure</h2>
-    
-     
-    for (var i = 0; i < Model.ExpenseItems.Count();i++ )
-    {
-        
-       <div>    
-       @Html.TextBoxFor(x => x.ExpenseItems[i].Name, new { @readonly = true })
-        £
-       @Html.TextBoxFor(x => x.ExpenseItems[i].DefaultValue)
-       @Html.HiddenFor(x => x.ExpenseItems[i].StandardItemId)
-       </div> 
-       
-    };
+
         
    <input type="submit" value="Proceed" />
     

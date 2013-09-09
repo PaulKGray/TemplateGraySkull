@@ -1,0 +1,19 @@
+﻿@model Template.Models.ParentItemModel
+
+<h2>Create New</h2>
+
+@using (Html.BeginForm("CreateParentItem", "Admin", FormMethod.Post)) {
+
+    @Html.ValidationSummary();
+
+    @Html.LabelFor(x => x.Name);
+    @Html.TextBoxFor(x=>x.Name);
+	  
+    <div>
+        <input type="submit" value="Add Parent Item" />
+        @Html.ActionLink("Cancel", "Index")
+    </div>
+
+    
+
+}

@@ -26,8 +26,8 @@ namespace Template.Services.Registrations
         {
             var fluentConfig = Fluently.Configure()
               .Database(MsSqlConfiguration.MsSql2008.DoNot.UseReflectionOptimizer()
-              .ConnectionString(c => c.FromConnectionStringWithKey("BudConn")))
-              .Mappings(m => m.FluentMappings.AddFromAssemblyOf<ClientBudgetMap>())
+							.ConnectionString(c => c.FromConnectionStringWithKey("TemplateConn")))
+							.Mappings(m => m.FluentMappings.AddFromAssemblyOf<ParentItemMap>())
               .ExposeConfiguration(x => x.SetProperty("current_session_context_class", "web"))
               .ExposeConfiguration(BuildSchema);
 

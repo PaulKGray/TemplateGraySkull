@@ -187,7 +187,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActionFilters\TransactionAttribute.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\BudgetController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -195,9 +194,8 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\BudgetItemModel.cs" />
+    <Compile Include="Models\ChildItemModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
-    <Compile Include="Models\ItemTypeList.cs" />
     <Compile Include="Models\ParentItemModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -315,7 +313,6 @@
     <Content Include="Views\Admin\CreateNew.cshtml" />
     <Content Include="Views\Admin\EditStandardItem.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\BudgetItemModel.cshtml" />
-    <Content Include="Views\Home\NextSteps.cshtml" />
     <Content Include="Views\Budget\BudgetSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>

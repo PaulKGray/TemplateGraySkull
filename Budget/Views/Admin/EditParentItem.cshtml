@@ -1,0 +1,28 @@
+﻿@model Template.Models.ParentItemModel
+@{
+    ViewBag.Title = "EditStandardItem";
+}
+
+<h2>Edit Parent Item</h2>
+
+<p>This is the parent item please make amendments below</p>
+
+
+@using (Html.BeginForm("EditParentItem", "Admin", FormMethod.Post))
+{
+    
+    @Html.ValidationSummary();
+
+    @Html.LabelFor(x => x.Name);
+    @Html.TextBoxFor(x => x.Name);
+ 
+   
+      
+    <div class="control">
+        <input type="submit" value="Edit Item" />
+        @Html.ActionLink("Delete", "DeleteParentItem", new { ID=Model.id })
+        @Html.ActionLink("Cancel", "Index")
+    </div>
+   
+ 
+}
