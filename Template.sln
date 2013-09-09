@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Domain", "Budget.Domain\Template.Domain.csproj", "{C01BA0CF-C883-4BCA-868A-A5BCE85066B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Domain", "Domain\Template.Domain.csproj", "{C01BA0CF-C883-4BCA-868A-A5BCE85066B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Services", "Budget.Services\Template.Services.csproj", "{28E7E5D3-F835-4285-87B7-7DFBA173A719}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Services", "Services\Template.Services.csproj", "{28E7E5D3-F835-4285-87B7-7DFBA173A719}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Repository", "Budget.Repository\Template.Repository.csproj", "{78C7E99C-9054-4255-B35F-D417AAAFB24B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Repository", "Repository\Template.Repository.csproj", "{78C7E99C-9054-4255-B35F-D417AAAFB24B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Budget\Template.csproj", "{4FD34974-FB22-4D23-8842-9F6160BADF68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template","WebSite\Template.csproj", "{4FD34974-FB22-4D23-8842-9F6160BADF68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

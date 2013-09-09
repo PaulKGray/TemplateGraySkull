@@ -321,11 +321,11 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Budget.Domain\Template.Domain.csproj">
+    <ProjectReference Include="..\Domain\Template.Domain.csproj">
       <Project>{c01ba0cf-c883-4bca-868a-a5bce85066b9}</Project>
       <Name>Template.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Budget.Services\Template.Services.csproj">
+    <ProjectReference Include="..\Services\Template.Services.csproj">
       <Project>{28e7e5d3-f835-4285-87b7-7dfba173a719}</Project>
       <Name>Template.Services</Name>
     </ProjectReference>
