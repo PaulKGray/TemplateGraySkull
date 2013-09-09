@@ -11,7 +11,7 @@ namespace Template.Services.Interfaces
     {
 			ParentItem CreateParent(ParentItem parent);
         ParentItem GetParentItem(int ParentItemId);
-        void SaveParentItem(ParentItem budget);
+        void SaveParentItem(ParentItem parentItem);
 				IList<ParentItem> GetAllParentItem();
 				void DeleteParentItem(int id);
     }

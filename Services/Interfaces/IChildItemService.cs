@@ -11,7 +11,7 @@ namespace Template.Services.Interfaces
     {
         ChildItem AddChildItem(ChildItem childItem);
         ChildItem GetChildItem(int childItemId);
-        void SaveChildItem(ChildItem budgetItem);
+        void SaveChildItem(ChildItem childItem);
         void SaveChildItems(IList<ChildItem> childItems);
 
     }
