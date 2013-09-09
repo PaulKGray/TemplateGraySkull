@@ -26,7 +26,7 @@ namespace Template.Domain
         }
 
 
-        public void AddChildItem(ChildItem childitem) {
+        public virtual void AddChildItem(ChildItem childitem) {
 
 					this.ChildItems.Add(childitem);
 					

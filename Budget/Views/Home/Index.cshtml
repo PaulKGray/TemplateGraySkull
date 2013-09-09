@@ -2,12 +2,9 @@
 
 <h1>The App</h1>
 
-<p>Its time to get you started and create your budget</p>
+<p>This is the first page of the app</p>
 
-<p>This is the basic getting started page if you know the full details of your spending lets js</p>
-
-
-    <h2>Personal Details</h2>
+ 
 
    
 @using (Html.BeginForm("Index","Home", FormMethod.Post))
@@ -15,9 +12,7 @@
 
     @Html.ValidationSummary(true)
     
-    
-    <h2>Income</h2>
-     
+ 
 	for (var i = 0; i < Model.ParentItems.Count(); i++)
     {
 
