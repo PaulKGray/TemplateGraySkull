@@ -1,4 +1,4 @@
-![alt tag](http://doomkick.com/wp-content/uploads/2012/09/Castle_Grayskull.jpg)
+
 
 Template Gray Skull
 =============
