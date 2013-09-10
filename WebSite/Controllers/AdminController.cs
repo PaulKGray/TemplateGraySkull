@@ -10,150 +10,154 @@ using Template.Services.Interfaces;
 
 namespace Template.Controllers
 {
-    public class AdminController : Controller
-    {
-        //
-        // GET: /Admin/
+	public class AdminController : Controller
+	{
+		//
+		// GET: /Admin/
 
-        private IParentItemService _ParentItemService;
-        private IChildItemService _ChildItemService;
+		private IParentItemService _ParentItemService;
+		private IChildItemService _ChildItemService;
 
 		public AdminController(IParentItemService parentItemService, IChildItemService childItemService)
-        {
-			  _ParentItemService = parentItemService;
-              _ChildItemService = childItemService;
+		{
+			_ParentItemService = parentItemService;
+			_ChildItemService = childItemService;
 		}
-            
-        public ActionResult Index()
-        {
 
-            AdminModel adminModel = PopulateAdminModel();
+		public ActionResult Index()
+		{
 
-            return View(adminModel);
-        }
+			AdminModel adminModel = PopulateAdminModel();
 
-        private AdminModel PopulateAdminModel()
-        {
-            var adminModel = new AdminModel();
+			return View(adminModel);
+		}
 
-            var parentitems = _ParentItemService.GetAllParentItem();
-            IList<ParentItemModel> parentModelItems = new List<ParentItemModel>();
-            
-            foreach (var item in parentitems)
-	        {
-                var parentItem =  new ParentItemModel();
-                parentItem.Name = item.Name;
-                parentItem.ParentItemid = item.ParentItemid;
+		private AdminModel PopulateAdminModel()
+		{
+			var adminModel = new AdminModel();
 
-                foreach (var childItem in item.ChildItems)
-                {
-                    var childItemModel = new ChildItemModel();
-                    childItemModel.Name = childItem.Name;
-                    childItemModel.ChildItemId = childItem.ChildItemId;
-                    childItemModel.ParentItem = parentItem;
+			var parentitems = _ParentItemService.GetAllParentItem();
+			IList<ParentItemModel> parentModelItems = new List<ParentItemModel>();
 
-                    parentItem.ChildItems.Add(childItemModel);
-                }
-                
+			foreach (var item in parentitems)
+			{
+				var parentItem = new ParentItemModel();
+				parentItem.Name = item.Name;
+				parentItem.ParentItemid = item.ParentItemid;
 
-		        parentModelItems.Add(parentItem);
-	        }
+				foreach (var childItem in item.ChildItems)
+				{
+					var childItemModel = new ChildItemModel();
+					childItemModel.Name = childItem.Name;
+					childItemModel.ChildItemId = childItem.ChildItemId;
+					childItemModel.ParentItem = parentItem;
 
-            adminModel.ParentItems = parentModelItems;
+					parentItem.ChildItems.Add(childItemModel);
+				}
 
-            return adminModel;
 
-        }
+				parentModelItems.Add(parentItem);
+			}
 
-        [HttpGet]
+			adminModel.ParentItems = parentModelItems;
+
+			return adminModel;
+
+		}
+
+		[HttpGet]
 		public ActionResult CreateParentItem()
-        {
+		{
 
-            var model = new AdminCreateModel();
-            var parentItem = new ParentItemModel();
+			var model = new AdminCreateModel();
+			var parentItem = new ParentItemModel();
 
-            model.Parent = parentItem;
-             
-            for (int i = 0; i < 6; i++)
-            {
-                var childitem = new ChildItemModel();
+			model.Parent = parentItem;
 
-                model.ChildItems.Add(childitem);
-                 
-            }
+			for (int i = 0; i < 6; i++)
+			{
+				var childitem = new ChildItemModel();
+
+				model.ChildItems.Add(childitem);
+
+			}
 			return View(model);
-        }
+		}
 
-        [HttpPost]
-        public ActionResult CreateParentItem(AdminCreateModel model) {
+		[HttpPost]
+		public ActionResult CreateParentItem(AdminCreateModel model)
+		{
 
-            if (ModelState.IsValid) {
+			if (ModelState.IsValid)
+			{
 
-                var parentItem = new ParentItem(model.Parent.Name);
-                parentItem.Name = model.Parent.Name;
+				var parentItem = new ParentItem(model.Parent.Name);
+				parentItem.Name = model.Parent.Name;
 
-			    TempData["Message"] = string.Format("{0} has been added to your cart!", model.Parent.Name);
-
-
-               foreach (var item in model.ChildItems)
-               {
-                   if (item.Name != null){
-
-                       var childItem = new ChildItem(parentItem);
-                       childItem.Name = item.Name;
-                       parentItem.AddChildItem(childItem);
-
-                   }
-               }
+				TempData["Message"] = string.Format("{0} has been added to your cart!", model.Parent.Name);
 
 
-               parentItem = _ParentItemService.CreateParent(parentItem);
+				foreach (var item in model.ChildItems)
+				{
+					if (item.Name != null)
+					{
 
-                return RedirectToAction("Index");
+						var childItem = new ChildItem(parentItem);
+						childItem.Name = item.Name;
+						parentItem.AddChildItem(childItem);
 
-            }
+					}
+				}
 
-            return View(model);
-        }
 
-        [HttpGet]
-        public ActionResult EditParentItem(int id)
-        {
+				parentItem = _ParentItemService.CreateParent(parentItem);
+
+				return RedirectToAction("Index");
+
+			}
+
+			return View(model);
+		}
+
+		[HttpGet]
+		public ActionResult EditParentItem(int id)
+		{
 			var parentItem = _ParentItemService.GetParentItem(id);
 			var parentItemModel = new ParentItemModel();
 
 			parentItemModel.Name = parentItem.Name;
 
 			return View(parentItemModel);
-        }
+		}
 
-        [Transaction]
-        [HttpPost]
-        public ActionResult EditParentItem(ParentItemModel item)
-        {
-            if (ModelState.IsValid)
-            {
+		[Transaction]
+		[HttpPost]
+		public ActionResult EditParentItem(ParentItemModel item)
+		{
+			if (ModelState.IsValid)
+			{
 
-							var parentItem = new ParentItem(item.Name);
-							parentItem.Name = item.Name;
-							parentItem.ParentItemid = item.ParentItemid;
+				var parentItem = new ParentItem(item.Name);
+				parentItem.Name = item.Name;
+				parentItem.ParentItemid = item.ParentItemid;
 
-							_ParentItemService.SaveParentItem(parentItem);
+				_ParentItemService.SaveParentItem(parentItem);
 
-              return RedirectToAction("Index");
-            }
+				return RedirectToAction("Index");
+			}
 
-            return View(item);
-        }
+			return View(item);
+		}
 
-        [Transaction]
-        [HttpGet]
-        public ActionResult DeleteParentItem(int id) {
+		[Transaction]
+		[HttpGet]
+		public ActionResult DeleteParentItem(int id)
+		{
 
-					_ParentItemService.DeleteParentItem(id);
+			_ParentItemService.DeleteParentItem(id);
 
-          return RedirectToAction("Index");
-        }
+			return RedirectToAction("Index");
+		}
 
-    }
+	}
 }

@@ -11,7 +11,7 @@ namespace Template.Models
 
 		public int ChildItemId { get; set; }
 
-        [DisplayName("Child Item Name")]
+    [DisplayName("Child Item Name")]
 		public string Name { get; set; }
 
 		public ParentItemModel ParentItem { get; set; }

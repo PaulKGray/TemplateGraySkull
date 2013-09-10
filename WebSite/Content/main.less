@@ -5,7 +5,14 @@
 */
 
 
-@backgroundcolor:#666;
+@backgroundColor1:#accecd;
+@backgroundColor2:#8a151b;
+@backgroundColor3:#585340;
+@backgroundColor4:#b7ae9d; 
+
+@FontColor:#fafffc;
+
+@HeaderColor:#A93C5E;
 
 
 /* Standard Components */
@@ -21,9 +28,19 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
-    background-color:@backgroundcolor;
+    background-color:@backgroundColor1;
+		color:@FontColor;
+		margin: 0px;
+padding: 10px;
 }
 
+a, p, ul, li {
+	color:@FontColor;
+}
+
+h1, h2, h3, h4, h5 {
+	color:@FontColor;
+}
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i

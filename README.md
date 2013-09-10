@@ -54,7 +54,7 @@ This is a straight up MVC site it should have no logic this should be in the ser
 **Technologies Used**
 - Ninject
 - MVC4
+- Less
+- HTML5 boiler plate (normalise the site) http://html5boilerplate.com/
 
-HTML5 boiler plate 
 
-http://html5boilerplate.com/
