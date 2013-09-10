@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Template.Controllers
 {
@@ -25,6 +26,14 @@ namespace Template.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+
+
+            // Lets see if the main site role exists
+            if (!Roles.RoleExists("Administration"))
+            {
+                return RedirectToAction("SetUpSite", "Account");
+            }
+
 
             var model = new HomeModel();
 

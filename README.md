@@ -31,6 +31,17 @@ I have kept this very simple and only have one repository class to access the da
 
 - Nhibernate
 
+
+Database
+--------------
+
+SQL server
+
+Needs role and membership provider setting up see this
+
+http://msdn.microsoft.com/en-us/library/ms229862(v=vs.100).aspx
+
+
 Service
 --------------
 
