@@ -192,12 +192,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account\RolesModel.cs" />
+    <Compile Include="Models\Account\UserManagementModel.cs" />
+    <Compile Include="Models\Account\UserModel.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\ChildItemModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
-    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\Account\LoginViewModel.cs" />
     <Compile Include="Models\ParentItemModel.cs" />
-    <Compile Include="Models\SetUpSiteModel.cs" />
+    <Compile Include="Models\Account\SetUpSiteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -291,6 +294,7 @@
     <Content Include="Views\Admin\CreateParentItem.cshtml" />
     <Content Include="Views\Admin\EditParentItem.cshtml" />
     <Content Include="Views\Account\SetUpSite.cshtml" />
+    <Content Include="Views\Account\UserManagement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

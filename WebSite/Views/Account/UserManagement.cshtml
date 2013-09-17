@@ -1,0 +1,27 @@
+﻿@model Template.Models.Account.UserManagementModel
+
+<h2>User Management</h2>
+
+
+   
+@using (Html.BeginForm("CreateUser", "Account", FormMethod.Post))
+{ 
+
+}
+
+@foreach (var user in Model.users)
+{
+	
+	<div>
+
+		@user.Username
+
+		@Html.ActionLink("View", "OpenUser", "Account", new { username=user.Username }, null)
+
+		@Html.ActionLink("Block", "BlockUser", "Account", new { username=user.Username }, null)
+
+		@Html.ActionLink("Delete", "DeleteUser", "Account", new { username=user.Username }, null)
+
+	</div>
+	
+}

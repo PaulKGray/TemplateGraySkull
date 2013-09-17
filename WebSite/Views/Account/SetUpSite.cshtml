@@ -8,14 +8,20 @@
 
     @Html.ValidationSummary(true)
 
-    @Html.LabelFor(x=>x.AdminUsername)
-    @Html.TextBoxFor(x=>x.AdminUsername)
-
-    @Html.LabelFor(x=>x.AdminPassword)
-    @Html.TextBoxFor(x=>x.AdminPassword)
-    
-    @Html.LabelFor(x=>x.ConfirmAdminPassword)
-    @Html.TextBoxFor(x=>x.ConfirmAdminPassword)
-    
+		<div>
+			@Html.LabelFor(x=>x.AdminUsername)
+			@Html.TextBoxFor(x=>x.AdminUsername)
+		</div>
+		
+		<div>
+			@Html.LabelFor(x=>x.AdminPassword)
+			@Html.TextBoxFor(x=>x.AdminPassword)
+		</div>
+	
+		<div>
+			@Html.LabelFor(x=>x.ConfirmAdminPassword)
+			@Html.TextBoxFor(x=>x.ConfirmAdminPassword)
+		</div>
+	    
     <input type="submit" />
 }
