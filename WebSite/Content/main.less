@@ -1,21 +1,8 @@
 
-/* Varibles 
-* This is a place holder for varibles.
-* 
-*/
-
-
-@backgroundColor1:#accecd;
-@backgroundColor2:#8a151b;
-@backgroundColor3:#585340;
-@backgroundColor4:#b7ae9d; 
-
-@FontColor:#fafffc;
-
-@HeaderColor:#A93C5E;
-
-
 /* Standard Components */
+
+@import "lib";
+
 
 html,
 button,
@@ -31,8 +18,18 @@ body {
     background-color:@backgroundColor1;
 		color:@FontColor;
 		margin: 0px;
-padding: 10px;
+		padding: 0px;
+
 }
+
+body, header{
+     -webkit-transition: background-color 1000ms linear;
+     -moz-transition: background-color 1000ms linear;
+     -o-transition: background-color 1000ms linear;
+     -ms-transition: background-color 1000ms linear;
+     transition: background-color 1000ms linear;
+}
+
 
 a, p, ul, li {
 	color:@FontColor;
@@ -42,9 +39,17 @@ h1, h2, h3, h4, h5 {
 	color:@FontColor;
 }
 
+		h1:before{
+		content: "Normal ";
+	}
+
 label {
-	width: 200px;
+	width: 50%;
 	display: inline-block;
+}
+
+header{
+    background-color:@backgroundColor2;
 }
 
 /*
@@ -117,7 +122,14 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+	 	label {
+		width: 40%;
+	}
 
+	input
+	{
+		width: 40%;
+	}
 
 
 

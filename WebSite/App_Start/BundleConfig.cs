@@ -16,9 +16,9 @@ namespace Template
                         "~/Scripts/vendor/modernizr-*"));
 
 
-            var lessBundle = new Bundle("~/Content/css").Include("~/Content/normalize.css",
-                "~/Content/main.less");
-
+						var lessBundle = new Bundle("~/Content/css").Include(
+							"~/Content/normalize.css",
+							"~/Content/master.less");
             lessBundle.Transforms.Add(new CssTransformer());
             lessBundle.Transforms.Add(new CssMinify());
             bundles.Add(lessBundle);

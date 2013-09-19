@@ -204,7 +204,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\forms.less" />
     <None Include="Content\main.less" />
+    <None Include="Content\main0768x0321.less" />
+    <None Include="Content\main0321x0000.less" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -260,6 +263,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <None Include="Content\lib.less" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\vendor\jquery-1.9.1.min.js" />
@@ -295,6 +299,8 @@
     <Content Include="Views\Admin\EditParentItem.cshtml" />
     <Content Include="Views\Account\SetUpSite.cshtml" />
     <Content Include="Views\Account\UserManagement.cshtml" />
+    <Content Include="Content\main9999x0768.less" />
+    <Content Include="Content\master.less" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
