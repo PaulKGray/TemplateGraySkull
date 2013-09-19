@@ -15,27 +15,22 @@
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
-
-  <body>
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-      
-        <header> 
-            <nav>
-                <ul id="menu">
+	  <body><header><nav>
+                <ul class="nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Admin", "Index","Admin")</li>
                 </ul>
             </nav>
         </header>
-
         <div id="body">
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
+						
+				<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
         </div>
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
