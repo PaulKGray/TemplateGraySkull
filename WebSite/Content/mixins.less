@@ -1,0 +1,33 @@
+﻿.box-shadow(@style, @c) when (iscolor(@c))
+{
+	box-shadow:         @style @c;
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+}
+
+.background-color-animate(@time)
+{
+     -webkit-transition: background-color @time linear;
+     -moz-transition: background-color @time linear;
+     -o-transition: background-color @time linear;
+     -ms-transition: background-color @time linear;
+     transition: background-color @time linear;
+}
+
+
+.boxsizing()
+{
+	-webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;  
+}
+
+
+.boxshadow(@args)
+{
+-moz-box-shadow: @args;
+-webkit-box-shadow: @args;
+-ms-box-shadow: @args;
+-o-box-shadow: @args;
+box-shadow: @args;
+}

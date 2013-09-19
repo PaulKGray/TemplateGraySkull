@@ -49,7 +49,13 @@ namespace Template.Controllers
 				[HttpPost]
 				public ActionResult SetUpSite(SetUpSiteModel model) {
 
-					if (ModelState.IsValid)
+					if (model.AdminPassword != model.ConfirmAdminPassword) {
+
+						ModelState.AddModelError("AdminPassword", "Your passwords do not match");
+						
+					}
+
+					if (!ModelState.IsValid)
 					{
 
 						if (Roles.RoleExists("Administrator"))

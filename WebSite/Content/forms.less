@@ -1,21 +1,11 @@
 ﻿input[type=submit], input[type=button] {
-	display: inline-block;
-	padding: 4px 12px;
-	margin-bottom: 0;
-	font-size: 14px;
-	line-height: 20px;
-	color: #333333;
+	margin-top:@bottom-margin-top;
+	color: @FontColor;
 	text-align: center;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
 	vertical-align: middle;
 	cursor: pointer;
-	background-color: #f5f5f5;
-	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-	background-repeat: repeat-x;
+	background-color: @button-colour;
 	border: 1px solid #cccccc;
 	border-color: #333 #333 #ccc;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -28,14 +18,34 @@
 	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	.background-color-animate(500ms)
 }
 
 input[type=submit]:hover, input[type=button]:focus {
-	color: #333333;
+	color: @FontColor;
 	text-decoration: none;
-	background-position: 0 -50px;
+	background-color:@button-colour-hover;
 	-webkit-transition: background-position 0.1s linear;
 	-moz-transition: background-position 0.1s linear;
 	-o-transition: background-position 0.1s linear;
 	transition: background-position 0.1s linear;
+		.background-color-animate(250ms)
+
 }
+
+
+	input, label, textarea, select
+	{
+		width: 98%;
+		padding:@element-padding;
+		margin-bottom:@element-margin-bottom;
+		line-height: 20px;
+		.boxsizing()
+
+	}
+
+
+ input, textarea, select{
+ 		font-size:@font-size-form-element;
+ }
+

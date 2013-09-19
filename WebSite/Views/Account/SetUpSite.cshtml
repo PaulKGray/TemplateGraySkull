@@ -3,7 +3,7 @@
 <h2>Set Up Website</h2>
 
    
-@using (Html.BeginForm("Index","Home", FormMethod.Post))
+@using (Html.BeginForm("SetUpSite", "Account", FormMethod.Post))
 {
 
     @Html.ValidationSummary(true)
@@ -15,12 +15,12 @@
 		
 		<div>
 			@Html.LabelFor(x=>x.AdminPassword)
-			@Html.TextBoxFor(x=>x.AdminPassword)
+			@Html.PasswordFor(x=>x.AdminPassword)
 		</div>
 	
 		<div>
 			@Html.LabelFor(x=>x.ConfirmAdminPassword)
-			@Html.TextBoxFor(x=>x.ConfirmAdminPassword)
+			@Html.PasswordFor(x=>x.ConfirmAdminPassword)
 		</div>
 	    
     <input type="submit" />

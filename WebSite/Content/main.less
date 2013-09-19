@@ -4,6 +4,10 @@
 @import "lib";
 
 
+html{
+	background-color:@backgroundColor4;
+}
+
 html,
 button,
 input,
@@ -13,7 +17,7 @@ textarea {
 }
 
 body {
-    font-size: 1em;
+    font-size: @font-size;
     line-height: 1.4;
     background-color:@backgroundColor1;
 		color:@FontColor;
@@ -23,11 +27,7 @@ body {
 }
 
 body, header{
-     -webkit-transition: background-color 1000ms linear;
-     -moz-transition: background-color 1000ms linear;
-     -o-transition: background-color 1000ms linear;
-     -ms-transition: background-color 1000ms linear;
-     transition: background-color 1000ms linear;
+	.background-color-animate(1000ms)
 }
 
 
@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5 {
 	color:@FontColor;
 	margin:0px;
 	padding:0px;
+	text-align:center;
 }
 
 		h1:before{
@@ -52,8 +53,60 @@ label {
 }
 
 header{
-    background-color:@backgroundColor2;
+    background-color:@Header-Colour;
 }
+
+
+	.nav {
+		
+		border:solid 1px #ccc;
+
+		.boxshadow(0 3px 3px rgba(0,0,0,.05));
+
+		margin:0px;
+
+		li a{
+				text-decoration: none;
+			
+		}
+
+		li{
+			display:inline;
+			line-height:20px;
+			padding:5px;
+		  background-color:@backgroundColor1;
+			.background-color-animate(200ms)
+			
+		}
+		li:hover{
+			background-color:@backgroundColor3;
+		}
+
+	}
+
+
+#body{
+	padding:3px;
+	padding-bottom:20px;
+	max-width:@max-screen-width;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+footer{
+    background-color:@Footer-Colour;
+		border:solid 1px #ccc;
+	padding:3px;
+	padding-bottom:5px;
+	.boxshadow(0 3px 3px rgba(0,0,0,.05));
+}
+
+header, #body, footer{
+	max-width:@max-screen-width;
+	margin-left:auto;
+	margin-right:auto;
+}
+
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -124,21 +177,6 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-	 	label {
-		width: 40%;
-	}
-
-	input
-	{
-		width: 40%;
-	}
-
-	.nav {
-	
-		margin:0px;
-	}
-
 
 
 /* ==========================================================================

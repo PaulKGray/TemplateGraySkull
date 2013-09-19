@@ -208,6 +208,7 @@
     <None Include="Content\main.less" />
     <None Include="Content\main0768x0321.less" />
     <None Include="Content\main0321x0000.less" />
+    <None Include="Content\mixins.less" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
