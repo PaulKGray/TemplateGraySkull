@@ -15,7 +15,11 @@
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
     </head>
-	  <body><header><nav>
+	  <body>
+			
+			<header>
+				<h1>Site Name</h1>
+				<nav>
                 <ul class="nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Admin", "Index","Admin")</li>
