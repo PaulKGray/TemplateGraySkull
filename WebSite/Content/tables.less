@@ -16,9 +16,20 @@ table.display th,
 table.display td{
   border: 1px solid #B3BFAA;
   padding: .5em 1em;
+  background: @table-cell;
+  color:@table-cell-color;
+
+vertical-align: top;
 }
 
-table.display th{     background: #D5E0CC;
+
+table.display td a {
+
+		color:@table-cell-color;
+}
+
+table.display th{     background: @table-head-back;
+color:@white;
         border-top: 1px solid #B3BFAA;  }
 table.display td{  }
 
@@ -68,7 +79,8 @@ table.responsive-table{
         border-top: none;
     }
     table.responsive-table td.title{
-        background: #D5E0CC;
+background: @table-head-back;
+color:@white;
         border-top: 1px solid #B3BFAA;
     }
     table.responsive-table td.actions{

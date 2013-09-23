@@ -1,5 +1,6 @@
 ﻿input[type=submit], input[type=button] {
 	margin-top:@bottom-margin-top;
+ line-height: 35px;
 	color: @FontColor;
 	text-align: center;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
@@ -40,12 +41,17 @@ input[type=submit]:hover, input[type=submit]:focus	, input[type=button]:focus,  
 		padding:@element-padding;
 		margin-bottom:@element-margin-bottom;
 		line-height: 20px;
-		.boxsizing()
+		.boxsizing();
+		.background-color-animate(500ms);
 
 	}
 
+	input:focus{
+					.boxshadow(0 0 10px rgba(255,255,224,.5));
+	}
 
  input, textarea, select{
  		font-size:@font-size-form-element;
+				.boxshadow(0 5px 5px rgba(0,0,0,.07));
  }
 

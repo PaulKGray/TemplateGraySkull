@@ -3,9 +3,9 @@
     ViewBag.Title = "EditStandardItem";
 }
 
-<h2>Edit Parent Item</h2>
-
-<p>This is the parent item please make amendments below</p>
+<p class="bigText">
+    Edit the item below 
+</p>
 
 
 @using (Html.BeginForm("EditParentItem", "Admin", FormMethod.Post))
@@ -13,6 +13,7 @@
     
     @Html.ValidationSummary();
 
+    @Html.HiddenFor(x => x.ParentItemid);
     @Html.LabelFor(x => x.Name);
     @Html.TextBoxFor(x => x.Name);
  

@@ -5,7 +5,9 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Parent Items</h2>
+<p class="bigText">
+    Manage the items on your site. 
+</p>
 
 @Html.ActionLink("Add Parent Item", "CreateParentItem", "Admin")
 
@@ -38,21 +40,24 @@
             @item.Name             
 						</td> 
 						<td>
-							<p>This will be a description</p>
+							This will be a description
 							
 							@if (item.ChildItems.Count > 0) {
 				 						
-									<h4>Children</h4>
+									<ul>
 				 
-			 						 foreach (var childItem in item.ChildItems)
+			 						 @foreach (var childItem in item.ChildItems)
 										{
 
 		
-
-                        @childItem.Name
+                                        <li>     
+                                             @childItem.Name
+                                        </li>
 
 
 									}
+
+                                    </ul>
 						 }
 							else
 							{

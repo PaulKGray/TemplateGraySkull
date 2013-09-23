@@ -7,11 +7,11 @@
 
 .background-color-animate(@time)
 {
-     -webkit-transition: background-color @time linear;
-     -moz-transition: background-color @time linear;
-     -o-transition: background-color @time linear;
-     -ms-transition: background-color @time linear;
-     transition: background-color @time linear;
+     -webkit-transition: background-color @time linear, box-shadow @time;
+     -moz-transition: background-color @time linear, box-shadow @time;
+     -o-transition: background-color @time linear, box-shadow @time;
+     -ms-transition: background-color @time linear, box-shadow @time;
+     transition: background-color @time linear, box-shadow @time;
 }
 
 
@@ -30,4 +30,10 @@
 -ms-box-shadow: @args;
 -o-box-shadow: @args;
 box-shadow: @args;
+}
+
+.one-edge-shadow() {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	        box-shadow: 0 8px 6px -6px black;
 }

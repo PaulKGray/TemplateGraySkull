@@ -126,6 +126,7 @@ namespace Template.Controllers
 			var parentItemModel = new ParentItemModel();
 
 			parentItemModel.Name = parentItem.Name;
+            parentItemModel.ParentItemid = parentItem.ParentItemid;
 
 			return View(parentItemModel);
 		}
