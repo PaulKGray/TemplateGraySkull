@@ -9,19 +9,49 @@
 
 }
 
+<table class="layout display responsive-table">
+	<thead>
+		<tr>
+			<th>
+				User
+			</th>
+		</tr>
+		<tr>
+			<th>
+				Details
+			</th>
+		</tr>
+		<tr>
+			<th>
+				Actions
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+
 @foreach (var user in Model.users)
 {
 	
-	<div>
+	<tr>
+		<td>
+			@user.Username
+		</td>
+		<td>
+			Something about said user
+		</td>
+		<td>
 
-		@user.Username
+			@Html.ActionLink("View", "OpenUser", "Account", new { username=user.Username }, null)
 
-		@Html.ActionLink("View", "OpenUser", "Account", new { username=user.Username }, null)
+			@Html.ActionLink("Block", "BlockUser", "Account", new { username=user.Username }, null)
 
-		@Html.ActionLink("Block", "BlockUser", "Account", new { username=user.Username }, null)
+			@Html.ActionLink("Delete", "DeleteUser", "Account", new { username=user.Username }, null)
 
-		@Html.ActionLink("Delete", "DeleteUser", "Account", new { username=user.Username }, null)
-
-	</div>
-	
+		</td>
+	</tr>
 }
+		
+	</tbody>
+</table>
+
+
