@@ -20,33 +20,55 @@
 
 		 
 		 
+      <table class="layout display responsive-table">
 
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Desciption</th>
+						<th>Controls</th>
+					</tr>
 
-	foreach (var item in Model.ParentItems)
+				</thead>
+
+	@foreach (var item in Model.ParentItems)
     {        
-        <div>
-            @item.Name  
-            @Html.ActionLink("Edit", "EditParentItem", "Admin", new { ID=item.ParentItemid }, null)
+					<tr>		
+						<td class="title"> 
+            @item.Name             
+						</td> 
+						<td>
+							<p>This will be a description</p>
+							
+							@if (item.ChildItems.Count > 0) {
+				 						
+									<h4>Children</h4>
+				 
+			 						 foreach (var childItem in item.ChildItems)
+										{
 
-            @if (item.ChildItems.Count > 0 ){
-            
-                <ul>
-                
-                @foreach (var childItem in item.ChildItems)
-	            {
-		            <li>  
+		
+
                         @childItem.Name
-                    </li>
-	            }
-
-                </ul>
-            
-            }
 
 
-        </div>
-        
-    }
-           
+									}
+						 }
+							else
+							{
+							<p>No Child Items</p>
+						}
+
+
+						</td>
+						<td>
+            @Html.ActionLink("Edit", "EditParentItem", "Admin", new { ID=item.ParentItemid }, null)
+						</td>
+     
+         	 </tr>	
+	 
+      
+}	</table>
+
 }}
 

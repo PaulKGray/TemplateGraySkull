@@ -55,15 +55,15 @@ namespace Template.Controllers
 						
 					}
 
-					if (!ModelState.IsValid)
+					if (ModelState.IsValid)
 					{
 
-						if (Roles.RoleExists("Administrator"))
+						if (!Roles.RoleExists("Administrator"))
 						{
 
 							var userException = Membership.CreateUser(model.AdminUsername, model.AdminPassword, model.AdminUsername);
 							Roles.CreateRole("Administrator"); // could swap this out to config
-							Roles.AddUserToRole(model.AdminUsername, model.AdminPassword);
+							Roles.AddUserToRole(model.AdminUsername, "Administrator");
 
 							FormsAuthentication.SetAuthCookie(model.AdminUsername, true);
 

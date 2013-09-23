@@ -29,7 +29,7 @@ namespace Template.Controllers
 
 
             // Lets see if the main site role exists
-            if (!Roles.RoleExists("Administration"))
+					if (!Roles.RoleExists("Administrator"))
             {
                 return RedirectToAction("SetUpSite", "Account");
             }
