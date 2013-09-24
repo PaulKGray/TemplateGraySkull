@@ -1,0 +1,28 @@
+﻿@model Template.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<p class="bigText">
+   Enter your details to login to the site. 
+</p>
+
+@using (Html.BeginForm("Login","Account", FormMethod.Post))
+{
+	
+	@Html.ValidationSummary()
+
+	@Html.LabelFor(x=>x.Email)
+	@Html.TextBoxFor(x=>x.Email)
+	
+	@Html.LabelFor(x=>x.Password)
+	@Html.PasswordFor(x=>x.Password)
+
+	<input type="submit" value="Login" />
+
+	
+}
+
+@Html.ActionLink("Forgot Your Password", "ForgotPassword", "Account")

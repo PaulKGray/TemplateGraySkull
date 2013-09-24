@@ -189,6 +189,7 @@
     <Compile Include="Controllers\ActionFilters\TransactionAttribute.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -206,14 +207,33 @@
   <ItemGroup>
     <Content Include="Content\forms.less" />
     <None Include="Content\main.less" />
-    <None Include="Content\main0768x0321.less" />
-    <None Include="Content\main0321x0000.less" />
+    <None Include="Content\sizemed.less" />
+    <None Include="Content\sizemobile.less" />
     <None Include="Content\mixins.less" />
+    <None Include="Content\layout.less" />
+    <Content Include="Content\lib.css">
+      <DependentUpon>lib.less</DependentUpon>
+    </Content>
+    <Content Include="Content\lib.min.css">
+      <DependentUpon>lib.less</DependentUpon>
+    </Content>
+    <Content Include="Content\main.css">
+      <DependentUpon>main.less</DependentUpon>
+    </Content>
+    <Content Include="Content\main.min.css">
+      <DependentUpon>main.less</DependentUpon>
+    </Content>
     <Content Include="Content\master.css">
       <DependentUpon>master.less</DependentUpon>
     </Content>
     <Content Include="Content\master.min.css">
       <DependentUpon>master.less</DependentUpon>
+    </Content>
+    <Content Include="Content\mixins.css">
+      <DependentUpon>mixins.less</DependentUpon>
+    </Content>
+    <Content Include="Content\mixins.min.css">
+      <DependentUpon>mixins.less</DependentUpon>
     </Content>
     <Content Include="Content\normalize.css" />
     <None Include="Content\tables.less" />
@@ -312,10 +332,12 @@
     <Content Include="Views\Admin\CreateParentItem.cshtml" />
     <Content Include="Views\Admin\EditParentItem.cshtml" />
     <Content Include="Views\Account\SetUpSite.cshtml" />
-    <Content Include="Views\Account\UserManagement.cshtml" />
-    <Content Include="Content\main9999x0768.less" />
+    <Content Include="Views\User\UserManagement.cshtml" />
+    <Content Include="Content\sizelarge.less" />
     <Content Include="Content\master.less" />
     <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -19,7 +19,7 @@ body {
   color: #fafffc;
   margin: 0px;
   padding: 0px;
-  height: 100%;
+  min-height: 100%;
 }
 body,
 header {
@@ -28,6 +28,15 @@ header {
   -o-transition: background-color 1000ms linear, box-shadow 1000ms;
   -ms-transition: background-color 1000ms linear, box-shadow 1000ms;
   transition: background-color 1000ms linear, box-shadow 1000ms;
+}
+body,
+header,
+#body,
+footer {
+  transition: width 500ms;
+  -webkit-transition: width 500ms;
+  /* Safari */
+
 }
 .mainheader {
   background-color: #333333;
@@ -115,6 +124,10 @@ section {
   width: 100%;
 }
 article {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
   background-color: #fafffc;
   color: #333333;
   padding: 5px;
@@ -153,6 +166,7 @@ p.bigText {
   letter-spacing: -2px;
   text-transform: capitalize;
   text-align: justify;
+  transition: font 500ms ease;
   color: white;
 }
 h1,
@@ -553,13 +567,18 @@ table.responsive-table {
   }
 }
 /* Smartphones (portrait) ----------- */
-@media all and (max-width: 428px) and (min-width: 0px) {
+@media all and (max-width: 510px) and (min-width: 0px) {
   body {
     background-color: #bc6367;
-    width: 321px;
+  }
+  .mainheader,
+  #body,
+  .mainfooter {
+    width: 300px;
   }
   p.bigText {
     font-size: 1.9em;
+    text-align: center;
   }
   header {
     height: 30px;
@@ -569,9 +588,14 @@ table.responsive-table {
   }
 }
 /* Tablets ----------- */
-@media all and (max-width: 768px) and (min-width: 428px) {
+@media all and (max-width: 768px) and (min-width: 510px) {
   body {
     background-color: #accecd;
+  }
+  .mainheader,
+  #body,
+  .mainfooter {
+    width: 500px;
   }
   p.bigText {
     font-size: 2.5em;
@@ -581,6 +605,11 @@ table.responsive-table {
 @media all and (max-width: 999999px) and (min-width: 768px) {
   body {
     background-color: #b7ae9d;
+  }
+  .mainheader,
+  #body,
+  .mainfooter {
+    width: 780px;
   }
   .ArticleSection {
     float: left;

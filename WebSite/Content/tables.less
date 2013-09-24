@@ -1,6 +1,15 @@
 ﻿
 /* http://codepen.io/izzrael/pen/CvFHy ----------- */
 
+table
+{
+    
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+}
+
 table th,
 table td{
   text-align: left;
@@ -37,7 +46,7 @@ table.responsive-table{
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 30em){
+@media (max-width: @Mobile-width){
     table.responsive-table{
       box-shadow: none;  
     }

@@ -24,6 +24,7 @@ namespace Template.Controllers
 			_ChildItemService = childItemService;
 		}
 
+		[Authorize(Roles = "Administrator")]
 		public ActionResult Index()
 		{
 
@@ -31,7 +32,8 @@ namespace Template.Controllers
 
 			return View(adminModel);
 		}
-
+		
+		[Authorize(Roles = "Administrator")]
 		private AdminModel PopulateAdminModel()
 		{
 			var adminModel = new AdminModel();
@@ -64,7 +66,8 @@ namespace Template.Controllers
 			return adminModel;
 
 		}
-
+		
+		[Authorize(Roles = "Administrator")]
 		[HttpGet]
 		public ActionResult CreateParentItem()
 		{
@@ -84,6 +87,7 @@ namespace Template.Controllers
 			return View(model);
 		}
 
+		[Authorize(Roles = "Administrator")]
 		[HttpPost]
 		public ActionResult CreateParentItem(AdminCreateModel model)
 		{
@@ -118,7 +122,8 @@ namespace Template.Controllers
 
 			return View(model);
 		}
-
+		
+		[Authorize(Roles = "Administrator")]
 		[HttpGet]
 		public ActionResult EditParentItem(int id)
 		{
@@ -131,6 +136,7 @@ namespace Template.Controllers
 			return View(parentItemModel);
 		}
 
+		[Authorize(Roles = "Administrator")]
 		[Transaction]
 		[HttpPost]
 		public ActionResult EditParentItem(ParentItemModel item)
@@ -150,6 +156,7 @@ namespace Template.Controllers
 			return View(item);
 		}
 
+		[Authorize(Roles = "Administrator")]
 		[Transaction]
 		[HttpGet]
 		public ActionResult DeleteParentItem(int id)

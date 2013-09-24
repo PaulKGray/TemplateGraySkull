@@ -12,6 +12,27 @@ namespace Template.Controllers
     public class AccountController : Controller
     {
 
+
+			[HttpGet]
+			public ActionResult Logout()
+			{
+
+				FormsAuthentication.SignOut();
+				Roles.DeleteCookie();
+				return RedirectToAction("Index","home");
+
+
+			}
+
+
+			[HttpGet]
+			public ActionResult Login()
+			{
+
+				return View();
+
+			
+			}
 	 
 
         [HttpPost]
@@ -24,12 +45,21 @@ namespace Template.Controllers
                 {
                     FormsAuthentication.SetAuthCookie(viewModel.Email, true);
 
-                    return RedirectToAction("");
+                    return RedirectToAction("Index","Home");
                 }
             }
 
             return View();
         }
+
+				[HttpGet]
+				public ActionResult ForgotPassword() {
+
+					return View();
+				
+				}
+
+
 
 
         [HttpGet]
@@ -84,35 +114,6 @@ namespace Template.Controllers
 				
 				}
 
-
-				public ActionResult UserManagement() {
-										
-				
-					var users = Membership.GetAllUsers().Cast<MembershipUser>().OrderBy(x=>x.Email).ToList();
-
-					var userManagementModel = new UserManagementModel();
-
-					foreach (var user in users)
-					{
-						userManagementModel.users.Add(getUserDetails(user));
-					}
-					
-					return View(userManagementModel);
-
-				}
-
-
-				public UserModel getUserDetails(MembershipUser membershipuser) {
-
-					var user = new UserModel();
-					user.Email = membershipuser.Email;
-					user.Username = membershipuser.UserName;
-
-
-					
-					return user;
-
-				}
 
 
 

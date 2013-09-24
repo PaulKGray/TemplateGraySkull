@@ -1,13 +1,14 @@
 ﻿@model Template.Models.Account.UserManagementModel
 
-<h2>User Management</h2>
 
 
-   
-@using (Html.BeginForm("CreateUser", "Account", FormMethod.Post))
-{ 
+<p class="bigText">
+    Manage the users on the site
+</p>
 
-}
+
+@Html.ActionLink("Register New User","RegisterUser","Account")
+ 
 
 <table class="layout display responsive-table">
 	<thead>
@@ -15,13 +16,9 @@
 			<th>
 				User
 			</th>
-		</tr>
-		<tr>
 			<th>
 				Details
 			</th>
-		</tr>
-		<tr>
 			<th>
 				Actions
 			</th>
@@ -33,11 +30,28 @@
 {
 	
 	<tr>
-		<td>
+		<td class="title">
 			@user.Username
 		</td>
 		<td>
-			Something about said user
+			@if (user.Roles.Count() > 0)
+	 {
+			<ul>
+
+			@foreach (var role in user.Roles)
+	 {
+		 <li>
+		 @role.Role
+			</li>
+	 }
+
+			</ul>
+		 
+	 }
+			else
+			{
+		<p>User is in no roles</p>
+	 }
 		</td>
 		<td>
 

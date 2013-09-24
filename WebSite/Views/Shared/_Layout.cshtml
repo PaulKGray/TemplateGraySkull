@@ -19,8 +19,19 @@
 			<header class="mainheader">
 				<nav class="mainNav" >
                 <ul class="nav">
+
+
+
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Admin", "Index","Admin")</li>
+
+
+									@if (User.Identity.IsAuthenticated && User.IsInRole("Administrator")) {
+									   
+										<li>@Html.ActionLink("Admin", "Index","Admin")</li>
+					 					<li>@Html.ActionLink("Users", "UserManagement","User")</li>
+					 
+									}
+
                 </ul>
             </nav>
         </header>
@@ -36,6 +47,22 @@
         </div>
         <footer class="mainfooter">
             <p>&copy; @DateTime.Now.Year - Template Web Site Name</p>
+
+						@if (User.Identity.IsAuthenticated)
+			{
+
+						<p>User @User.Identity.Name logged in
+
+							@Html.ActionLink("Log out","Logout","Account")
+
+						</p>
+			}
+			else { 
+			
+						@Html.ActionLink("Login", "Login", "Account")
+			}
+				
+
         </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
