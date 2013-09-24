@@ -2,9 +2,9 @@
 
 
 
-<p class="bigText">Welcome to your new site <time></time></p>
+<p class="bigText">Welcome to your new site</p>
 
- 
+ <p>Listed below are all the items on the site. These are great items.</p>
 
    
 @using (Html.BeginForm("Index","Home", FormMethod.Post))
@@ -17,24 +17,37 @@
 	@for (var i = 0; i < Model.ParentItems.Count(); i++)
     {
 
-		
-       <article>    
+     
+       <article class="standardarticle" >    
 				 <header>
-					 @Model.ParentItems[0].Name
+					 @Model.ParentItems[i].Name
 				 </header>
-			
+                <div class="content">
 					 Will be desciption
-		
+
+                    @if (Model.ParentItems[i].ChildItems.Count() > 0) { 
+                    
+                    <ul>
+                    @foreach (var item in @Model.ParentItems[i].ChildItems)
+                    {
+                      <li> @item.Name </li>
+                    }
+                    </ul>
+                    }
+                        
+
+
+   
+                </div>
 				 <footer>
-					@Html.ActionLink("View Item","ItemDetails", new { id = Model.ParentItems[0].ParentItemid})
+					@Html.ActionLink("View Item","ParentItemDetails", new { ID = Model.ParentItems[0].ParentItemid}, null)
 				 </footer>
        </article> 
        
     }
 </section>
         
-   <input type="submit" value="Proceed" />
-    
+    <p>This is a cheat at the moment</p>
     
     
 }

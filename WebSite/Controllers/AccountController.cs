@@ -59,6 +59,12 @@ namespace Template.Controllers
 				
 				}
 
+        [HttpGet]
+                public ActionResult Register() {
+
+                    return View();
+                
+                }
 
 
 

@@ -7,6 +7,15 @@
 </p>
 
 
+@using (Html.BeginForm("UserManagement","User", FormMethod.Post))
+{
+    @Html.LabelFor(x=>x.SearchCriteria)
+    @Html.TextBoxFor(x=>x.SearchCriteria)
+
+    <input type="submit" value="Search" />
+}
+
+
 @Html.ActionLink("Register New User","RegisterUser","Account")
  
 

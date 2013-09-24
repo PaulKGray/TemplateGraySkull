@@ -63,27 +63,42 @@ namespace Template.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        [Transaction]
-        public ActionResult Index(HomeModel model) {
+        [HttpGet]
+        public ActionResult ParentItemDetails(int id)
+        {
 
-            if (ModelState.IsValid)
-            {
+            var item = _ParentItemService.GetParentItem(id);
 
-  
+            var viewmodel = convertParentItemDomainObject(item);
 
-            }
- 
-            return View(model);
+            return View(viewmodel);
+            
         }
 
-        public ActionResult NextSteps() {
+        ParentItemModel convertParentItemDomainObject(ParentItem parentItem)
+        {
 
+            var parentItemModel = new ParentItemModel();
+            parentItemModel.ParentItemid = parentItem.ParentItemid;
+            parentItemModel.Name = parentItem.Name;
 
-            return View();
-            
+            foreach (var childItem in parentItem.ChildItems)
+            {
+
+                var newChildItem = new ChildItemModel();
+                newChildItem.ChildItemId = childItem.ChildItemId;
+                newChildItem.Name = childItem.Name;
+
+                parentItemModel.ChildItems.Add(newChildItem);
+
+            }
+
+            return parentItemModel;
+
         }
 
 
     }
+
+    
 }

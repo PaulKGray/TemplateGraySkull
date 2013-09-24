@@ -17,17 +17,30 @@
     .ArticleSection
     {
         float:left;
-        .flexcontainer();
-        flex-flow: row wrap;
-
+        flex: auto;
+	        -webkit-flex-flow: row;
+        -moz-flex-flow: row;
+        -ms-flex-flow: row;
+        -o-flex-flow: row;
+        -webkit-flex-pack: center; /* <-- */
+        -moz-flex-pack: center;
+        -ms-flex-pack: center;
+        -o-flex-pack: center;
 
     }
 
-   .ArticleSection article
+   .ArticleSection .standardarticle
     {
-        width:47%;
         margin:5px;
     }
+
+	
+   .ArticleSection article:hover
+    {
+	
+	}
+
+
 
 }
 

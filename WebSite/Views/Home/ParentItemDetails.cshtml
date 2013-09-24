@@ -1,0 +1,10 @@
+﻿@model Template.Models.ParentItemModel
+
+<h2>ParentItemDetails</h2>
+
+@Model.Name
+
+@foreach (var item in Model.ChildItems)
+{
+    @item.Name
+}

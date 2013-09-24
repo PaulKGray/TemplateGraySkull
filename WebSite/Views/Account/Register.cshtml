@@ -1,0 +1,28 @@
+﻿@model Template.Models.Account.RegisterModel
+
+
+<p class="bigText">
+   Become a member of the site. 
+</p>
+
+@using (Html.BeginForm("Register","Account", FormMethod.Post)){
+
+    @Html.AntiForgeryToken()    
+
+    @Html.ValidationSummary()
+
+    @Html.LabelFor(x=>x.UserDetails.Email)
+    @Html.TextBoxFor(x=>x.UserDetails.Email)
+    
+    @Html.LabelFor(x=>x.UserDetails.Password)
+    @Html.PasswordFor(x=>x.UserDetails.Password)
+
+    @Html.LabelFor(x=>x.ConfirmAdminPassword)
+    @Html.PasswordFor(x=>x.ConfirmAdminPassword)
+
+    @Html.LabelFor(x=>x.Name)
+    @Html.TextBoxFor(x=>x.Name)
+
+    
+
+}
