@@ -4,33 +4,6 @@
 @import "lib";
 
 
-html{
-	background-color:@backgroundColor1;
-	height:100%;
-}
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
-}
-
-body {
-    font-size: @font-size;
-    line-height: 1.4;
-    background-color:@backgroundColor1;
-		color:@FontColor;
-		margin: 0px;
-		padding: 0px;
-
-}
-
-body, header{
-	.background-color-animate(1000ms)
-}
-
 
 a {
 
@@ -38,7 +11,7 @@ a {
 }
 
 p.bigText{
- margin-top:30px;
+ margin-top:60px;
  margin-bottom:10px;
  margin-right:15px;
  font-size:3.2em;
@@ -48,6 +21,8 @@ text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 letter-spacing: -2px;
 text-transform:capitalize;
 text-align:justify;
+transition: font 500ms ease;
+  color: white;
 }
 
 h1, h2, h3, h4, h5 {
@@ -64,79 +39,6 @@ h1, h2, h3, h4, h5 {
 label {
 	width: 50%;
 	display: inline-block;
-}
-
-header{
-    background-color:@Header-Colour;
-	.boxshadow(0 3px 3px rgba(0,0,0,.05));
-		display:block;
-		height:@header-height;
-}
-
-	header nav{
-	
-		margin-left:auto;
-	margin-right:auto;
-	max-width:@max-screen-width;
-		display:block;
-	}
-
-	.nav {
-
-
-
-		margin:0px;
-
-		li a{
-			text-decoration: none;
-			width: 100%;
-			display: block;
-			min-height: 100%;
-		}
-
-		li{
-			
-			width:120px;
-			float:left;
-			text-align:center;
-			display:block;
-			line-height:@header-height;
-			padding:0px;
-			.background-color-animate(500ms)
-
-		}
-		li:hover{
-			background-color:@nav-back;
-			.one-edge-shadow()
-		}
-
-	}
-
-
-#body{
-	padding:3px;
-	max-width:@max-screen-width;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-footer{
-    background-color:@Footer-Colour;
-		border:solid 1px #ccc;
-	padding:3px;
-	padding-bottom:5px;
-	.boxshadow(0 3px 3px rgba(0,0,0,.05));
-	position: relative;
-	width:100%;
-margin: 80px 0 0;
-height: 180px;
-bottom:0px;
-box-sizing: border-box;
-}
-
-header, #body, footer{
-	margin-left:auto;
-	margin-right:auto;
 }
 
 

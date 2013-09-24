@@ -1,8 +1,8 @@
 ﻿@model Template.Models.HomeModel
 
-<h1>TemplateGraySkull</h1>
 
-<p>Welcome to your new site</p>
+
+<p class="bigText">Welcome to your new site <time></time></p>
 
  
 
@@ -12,16 +12,26 @@
 
     @Html.ValidationSummary(true)
     
- 
-	for (var i = 0; i < Model.ParentItems.Count(); i++)
+ <section class="ArticleSection">
+	
+	@for (var i = 0; i < Model.ParentItems.Count(); i++)
     {
 
-       <div>    
-       @Html.TextBoxFor(x => x.ParentItems[i].Name, new { @readonly = true })
-       </div> 
+		
+       <article>    
+				 <header>
+					 @Model.ParentItems[0].Name
+				 </header>
+			
+					 Will be desciption
+		
+				 <footer>
+					@Html.ActionLink("View Item","ItemDetails", new { id = Model.ParentItems[0].ParentItemid})
+				 </footer>
+       </article> 
        
-    };
-
+    }
+</section>
         
    <input type="submit" value="Proceed" />
     

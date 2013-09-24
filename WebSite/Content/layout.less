@@ -1,0 +1,154 @@
+﻿
+
+
+html{
+	background-color:@backgroundColor1;
+	height:100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: @font-size;
+    line-height: 1.4;
+    background-color:@backgroundColor1;
+		color:@FontColor;
+		margin: 0px;
+		padding: 0px;
+        	height:100%;
+
+}
+
+body, header{
+	.background-color-animate(1000ms)
+}
+
+body, header, #body, footer
+{
+	transition: width 500ms;
+    -webkit-transition: width 500ms; /* Safari */
+
+}
+
+
+.mainheader{
+    background-color:@Header-Colour;
+	.boxshadow(0 3px 3px rgba(0,0,0,.05));
+		display:block;
+		height:@header-height;
+}
+
+	.mainheader .mainNav{
+	
+		margin-left:auto;
+	margin-right:auto;
+	max-width:@max-screen-width;
+		display:block;
+	}
+
+	.nav {
+
+
+
+		margin:0px;
+
+		li a{
+			text-decoration: none;
+			width: 100%;
+			display: block;
+			min-height: 100%;
+		}
+
+		li{
+			
+			width:120px;
+			float:left;
+			text-align:center;
+			display:block;
+			line-height:@header-height;
+			padding:0px;
+			.background-color-animate(500ms)
+
+		}
+		li:hover{
+			background-color:@nav-back;
+			.one-edge-shadow()
+		}
+
+	}
+
+
+#body{
+	padding:3px;
+	max-width:@max-screen-width;
+	margin-left:auto;
+	margin-right:auto;
+    min-height: 100%;
+    margin-bottom: -142px; 
+    margin-top: -@header-height; 
+        box-sizing: border-box;
+}
+#body:after {
+  content: "";
+  display: block;
+}
+.mainfooter, #body:after{
+  /* .push must be the same height as footer */
+  height: 142px; 
+}
+.mainfooter{
+    background-color:@Footer-Colour;
+	padding:3px;
+	padding-bottom:5px;
+	.boxshadow(0 3px 3px rgba(0,0,0,.05));
+    bottom:0px;
+    box-sizing: border-box;
+
+
+}
+
+.mainheader, #body, .mainfooter{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+section
+{
+	width:100%;
+	
+	
+}
+
+article
+{
+
+				background-color:@table-cell;
+			color:@table-cell-color;
+			padding:@leftright-padding;
+			 margin-bottom:5px;
+
+
+	header, footer{
+				background-color:@table-head-back;
+				line-height:@header-cell-height;
+				padding-left:@leftright-padding;
+				padding-right:@leftright-padding;
+				}
+		
+
+
+	
+
+footer
+{
+	margin-bottom:@margin-bottom-standard;
+					.boxshadow(0 3px 3px rgba(0,0,0,.5));
+}
+
+}

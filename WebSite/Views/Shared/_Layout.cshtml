@@ -16,10 +16,8 @@
         @Scripts.Render("~/bundles/modernizr")
     </head>
 	  <body>
-			
-			<header>
-			
-				<nav >
+			<header class="mainheader">
+				<nav class="mainNav" >
                 <ul class="nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Admin", "Index","Admin")</li>
@@ -36,7 +34,7 @@
         <![endif]-->
 
         </div>
-        <footer>
+        <footer class="mainfooter">
             <p>&copy; @DateTime.Now.Year - Template Web Site Name</p>
         </footer>
 
