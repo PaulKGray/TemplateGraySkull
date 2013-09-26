@@ -206,6 +206,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\fonts.less" />
     <Content Include="Content\forms.less" />
     <None Include="Content\main.less" />
     <None Include="Content\sizemed.less" />
@@ -301,6 +302,8 @@
     <None Include="Content\lib.less" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\GrayBear.png" />
+    <Content Include="Images\Grayskull.jpg" />
     <Content Include="Scripts\vendor\jquery-1.9.1.min.js" />
     <Content Include="Scripts\vendor\modernizr-2.6.2.min.js" />
     <Content Include="Web.config" />

@@ -3,7 +3,7 @@
 
 html{
 	background-color:@backgroundColor1;
-	height:100%;
+	min-height:100%;
 }
 
 html,
@@ -12,6 +12,11 @@ input,
 select,
 textarea {
     color: #222;
+}
+
+.content-wrapper
+{
+    margin-top:50px;
 }
 
 body {
@@ -46,10 +51,12 @@ body, header, #body, footer
 
 	.mainheader .mainNav{
 	
-		margin-left:auto;
+	margin-left:auto;
 	margin-right:auto;
 	max-width:@max-screen-width;
-		display:block;
+	display:inline-block;
+    padding:5px;
+    font-size:1em;
 	}
 
 	.nav {
@@ -66,13 +73,14 @@ body, header, #body, footer
 		}
 
 		li{
-			
-			width:120px;
+			padding:0px;
+			padding-left:@leftright-padding;
+            padding-right:@leftright-padding;
 			float:left;
 			text-align:center;
 			display:block;
 			line-height:@header-height;
-			padding:0px;
+
 			.background-color-animate(500ms)
 
 		}
@@ -100,16 +108,22 @@ body, header, #body, footer
 }
 .mainfooter, #body:after{
   /* .push must be the same height as footer */
-  height: 142px; 
+  min-height: 142px; 
 }
 .mainfooter{
     background-color:@Footer-Colour;
-	padding:3px;
+	padding:10px;
 	padding-bottom:5px;
 	.boxshadow(0 3px 3px rgba(0,0,0,.05));
-    bottom:0px;
+    display:block;
     box-sizing: border-box;
+    font-size:.9em;
 
+    
+ #footerlogo
+        {
+            float:right;
+     }
 
 }
 
@@ -127,35 +141,40 @@ section
 
 article
 {
-
-            -webkit-transition: all 0.3s ease;
-            -moz-transition: all 0.3s ease;
-            -o-transition: all 0.3s ease;
-            -ms-transition: all 0.3s ease;
-
-			 margin-bottom:5px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    margin-bottom: 5px;
 
 
-	header, footer{
-				background-color:@table-head-back;
-				line-height:@header-cell-height;
-				padding-left:@leftright-padding;
-				padding-right:@leftright-padding;
-				}
-		
-		.content{
-			padding:5px;
-						background-color:@table-cell;
-			color:@table-cell-color;
-			padding:@leftright-padding;
-		}
+    header, footer
+    {
+        background-color: @Pink;
+        line-height: @header-cell-height;
+        padding-left: @leftright-padding;
+        padding-right: @leftright-padding;
+    }
 
-	
+    .content
+    {
+        padding: 5px;
+        background-color: @table-cell;
+        color: @table-cell-color;
+        padding: @leftright-padding;
+    }
 
-footer
-{
-	margin-bottom:@margin-bottom-standard;
-					.boxshadow(0 3px 3px rgba(0,0,0,.5));
+
+
+    footer
+    {
+        margin-bottom: @margin-bottom-standard;
+        .boxshadow(0 3px 3px rgba(0,0,0,.5));
+
+
+
+    }        
+    
+  
 }
-
-}
+ 

@@ -45,8 +45,11 @@
         <![endif]-->
 
         </div>
-        <footer class="mainfooter">
-            <p>&copy; @DateTime.Now.Year - Template Web Site Name</p>
+        <footer class="mainfooter">		
+						<img id="footerlogo" alt="GrayBear Web Ontogenesis" src="~/Images/GrayBear.png" />
+            <small>&copy; @DateTime.Now.Year - Template Web Site Name</small>
+
+						
 
 						@if (User.Identity.IsAuthenticated)
 			{
@@ -67,8 +70,7 @@
               <li>@Html.ActionLink("Login", "Login", "Account")</li>
               <li>@Html.ActionLink("Register", "Register", "Account")</li>
           </ul>
-			
-						
+	
           
                         
 			}

@@ -68,4 +68,13 @@ This is a straight up MVC site it should have no logic this should be in the ser
 - Less
 - HTML5 boiler plate (normalise the site) http://html5boilerplate.com/
 
+Users are delt with by membership, user management is built into the template.
+
+Going Forward
+--------------
+
+Use these to help you design your site
+
+
+- http://goodui.org/
 

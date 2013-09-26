@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Template.Domain
 {
-    public class ParentItem
+	public class ParentItem : DomainBase
     {
         public virtual int ParentItemid { get; set; }
 
@@ -15,8 +15,7 @@ namespace Template.Domain
         public virtual IList<ChildItem> ChildItems { get; set; }
 
         protected ParentItem(){
-
-            
+    
         }
 
         public ParentItem(string name)
@@ -29,7 +28,7 @@ namespace Template.Domain
         public virtual void AddChildItem(ChildItem childitem) {
 
 					this.ChildItems.Add(childitem);
-                    childitem.Parent = this;
+          childitem.Parent = this;
 					
 		}
 

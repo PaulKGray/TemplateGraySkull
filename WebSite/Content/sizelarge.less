@@ -1,6 +1,13 @@
 ﻿/* Desktops and laptops ----------- */
-@media all and (max-width: 999999px) and (min-width: @Tablet-width)
+@media all and (max-width: 999999px) and (min-width: @max-screen-width)
 {
+
+    body
+    {
+        font-size: 1.2em;
+        line-height: 1.4;
+    }
+
 	body
 	{
 		background-color:@backgroundColor4;
@@ -9,16 +16,24 @@
 
         .mainheader, #body, .mainfooter
     {
-                width: @Tablet-width;
+                width: @max-screen-width;
     }
 
-
+	   h1
+    {
+        font-size: 4em;
+        font-weight:300;
+    }
+       
+    p.bigText{
+     font-size:2.5em;
+    }
 
     .ArticleSection
     {
         float:left;
         flex: auto;
-	        -webkit-flex-flow: row;
+	    -webkit-flex-flow: row;
         -moz-flex-flow: row;
         -ms-flex-flow: row;
         -o-flex-flow: row;
@@ -26,7 +41,7 @@
         -moz-flex-pack: center;
         -ms-flex-pack: center;
         -o-flex-pack: center;
-
+       /* http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
     }
 
    .ArticleSection .standardarticle

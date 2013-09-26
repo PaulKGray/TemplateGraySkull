@@ -1,5 +1,5 @@
 ﻿/* Tablets ----------- */
-@media all and (max-width: @Tablet-width) and (min-width: @Mobile-width)
+@media all and (max-width: @max-screen-width) and (min-width: @Tablet-width)
 {
 	body
 	{
@@ -10,10 +10,14 @@
 
         .mainheader, #body, .mainfooter
     {
-                width: @Mobile-width;
+                width: @Tablet-width;
     }
 
-	
+	   h1
+    {
+        font-size: 4em;
+    }
+
 p.bigText{
  font-size:2.5em;
 }

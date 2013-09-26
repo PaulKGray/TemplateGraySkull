@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Template.Domain
 {
-    public class ChildItem
+	public class ChildItem : DomainBase
     {
         public virtual int ChildItemId { get; set; }
         public virtual ParentItem Parent { get; set; }
