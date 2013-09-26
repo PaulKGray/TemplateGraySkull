@@ -78,3 +78,6 @@ Use these to help you design your site
 
 - http://goodui.org/
 
+![alt tag](https://raw.github.com/PaulKGray/TemplateGraySkull/master/WebSite/Images/GrayBear.jpg)
+
+
