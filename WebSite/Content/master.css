@@ -4,7 +4,7 @@
 /* Layout and positioning ----------- */
 html {
   background-color: #b7ae9d;
-  height: 100%;
+  min-height: 100%;
 }
 html,
 button,
@@ -111,7 +111,7 @@ footer {
 }
 .mainfooter {
   background-color: #333333;
-  padding: 3px;
+  padding: 10px;
   padding-bottom: 5px;
   -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
@@ -121,6 +121,9 @@ footer {
   display: block;
   box-sizing: border-box;
   font-size: .9em;
+}
+.mainfooter #footerlogo {
+  float: right;
 }
 .mainheader,
 #body,
@@ -157,9 +160,6 @@ article footer {
   -ms-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   -o-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-}
-article footer #footerlogo {
-  float: right;
 }
 a {
   color: #fafffc;
