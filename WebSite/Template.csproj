@@ -252,7 +252,9 @@
     <Content Include="Images\Grayskull.jpg" />
     <Content Include="Scripts\vendor\jquery-1.9.1.min.js" />
     <Content Include="Scripts\vendor\modernizr-2.6.2.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
