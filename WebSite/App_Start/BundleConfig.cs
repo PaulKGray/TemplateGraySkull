@@ -18,7 +18,7 @@ namespace Template
 
 						var lessBundle = new Bundle("~/Content/css").Include(
 							"~/Content/normalize.css",
-							"~/Content/master.less");
+							"~/Content/master.css");
             lessBundle.Transforms.Add(new CssTransformer());
             lessBundle.Transforms.Add(new CssMinify());
             bundles.Add(lessBundle);
@@ -36,6 +36,9 @@ namespace Template
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+						BundleTable.EnableOptimizations = true;
+
         }
 
 
