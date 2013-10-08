@@ -17,6 +17,8 @@ namespace Template.Models
         [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
+        [DisplayName("Description")]
+        public string Description { get; set; }
 
 		public IList<ChildItemModel> ChildItems;
 

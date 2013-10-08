@@ -4,19 +4,22 @@
 
 <h1>@Model.Name</h1>
 
-<article class="standardarticle">
+<article  class="standardarticle">
 
 	<header>
 		Description
 	</header>
+    <div class="content">
 
-	<p>Will be description</p>
+	@Model.Description
 	
 	@foreach (var item in Model.ChildItems)
 	{
 			@item.Name
 	}
 
+
+    </div>
 	<footer>
 		Controls
 	</footer>
@@ -25,3 +28,4 @@
 
 	</section>
 
+    <p>This is a cheat at the moment</p>

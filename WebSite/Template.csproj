@@ -207,12 +207,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\fonts.less" />
+    <Content Include="Content\fonts.css">
+      <DependentUpon>fonts.less</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts.min.css">
+      <DependentUpon>fonts.less</DependentUpon>
+    </Content>
+    <Content Include="Content\forms.css">
+      <DependentUpon>forms.less</DependentUpon>
+    </Content>
     <Content Include="Content\forms.less" />
     <None Include="Content\main.less" />
     <None Include="Content\sizemed.less" />
     <None Include="Content\sizemobile.less" />
     <None Include="Content\mixins.less" />
     <None Include="Content\layout.less" />
+    <Content Include="Content\forms.min.css">
+      <DependentUpon>forms.less</DependentUpon>
+    </Content>
+    <Content Include="Content\layout.css">
+      <DependentUpon>layout.less</DependentUpon>
+    </Content>
+    <Content Include="Content\layout.min.css">
+      <DependentUpon>layout.less</DependentUpon>
+    </Content>
     <Content Include="Content\lib.css">
       <DependentUpon>lib.less</DependentUpon>
     </Content>
@@ -239,6 +257,24 @@
     </Content>
     <Content Include="Content\normalize.css" />
     <None Include="Content\tables.less" />
+    <Content Include="Content\sizelarge.css">
+      <DependentUpon>sizelarge.less</DependentUpon>
+    </Content>
+    <Content Include="Content\sizelarge.min.css">
+      <DependentUpon>sizelarge.less</DependentUpon>
+    </Content>
+    <Content Include="Content\sizemed.css">
+      <DependentUpon>sizemed.less</DependentUpon>
+    </Content>
+    <Content Include="Content\sizemed.min.css">
+      <DependentUpon>sizemed.less</DependentUpon>
+    </Content>
+    <Content Include="Content\sizemobile.css">
+      <DependentUpon>sizemobile.less</DependentUpon>
+    </Content>
+    <Content Include="Content\sizemobile.min.css">
+      <DependentUpon>sizemobile.less</DependentUpon>
+    </Content>
     <Content Include="Content\tables.css">
       <DependentUpon>tables.less</DependentUpon>
     </Content>
@@ -291,7 +327,7 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Home\ParentItemDetails.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

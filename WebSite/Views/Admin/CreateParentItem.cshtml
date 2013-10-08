@@ -9,6 +9,9 @@
 
 	@Html.LabelFor(x => x.Parent.Name);
 	@Html.TextBoxFor(x => x.Parent.Name);
+
+    @Html.LabelFor(x => x.Parent.Description);
+    @Html.TextAreaFor(x => x.Parent.Description);
     
 	<h3>New Child Items</h3>
 	@Html.LabelFor(x => x.ChildItems[0].Name)

@@ -45,6 +45,7 @@ namespace Template.Controllers
 			{
 				var parentItem = new ParentItemModel();
 				parentItem.Name = item.Name;
+                parentItem.Description = item.Description;
 				parentItem.ParentItemid = item.ParentItemid;
 
 				foreach (var childItem in item.ChildItems)
@@ -97,7 +98,7 @@ namespace Template.Controllers
 
 				var parentItem = new ParentItem(model.Parent.Name);
 				parentItem.Name = model.Parent.Name;
-
+                parentItem.Description = model.Parent.Description;
 				TempData["Message"] = string.Format("{0} has been added to your cart!", model.Parent.Name);
 
 
@@ -131,6 +132,7 @@ namespace Template.Controllers
 			var parentItemModel = new ParentItemModel();
 
 			parentItemModel.Name = parentItem.Name;
+            parentItemModel.Description = parentItem.Description;
             parentItemModel.ParentItemid = parentItem.ParentItemid;
 
 			return View(parentItemModel);
@@ -146,6 +148,7 @@ namespace Template.Controllers
 
 				var parentItem = new ParentItem(item.Name);
 				parentItem.Name = item.Name;
+                parentItem.Description = item.Description;
 				parentItem.ParentItemid = item.ParentItemid;
 
 				_ParentItemService.SaveParentItem(parentItem);

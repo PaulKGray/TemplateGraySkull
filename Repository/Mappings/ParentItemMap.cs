@@ -15,6 +15,7 @@ namespace Template.Repository.Mappings
             Table("ParentItem");
             Id(x => x.ParentItemid);
 			Map(x => x.Name);
+            Map(x => x.Description);
             HasMany(x => x.ChildItems).Cascade.All().KeyColumns.Add("Parent_Id");
         }
     }

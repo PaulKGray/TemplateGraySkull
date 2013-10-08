@@ -15,21 +15,21 @@ namespace Template.Controllers
     {
 
         private IParentItemService _ParentItemService;
-				private IChildItemService _ChildItemService;
+		private IChildItemService _ChildItemService;
 
         public HomeController(IParentItemService parentItemService, IChildItemService childItemService)
         {
 					_ParentItemService = parentItemService;
 					_ChildItemService = childItemService;
         }
-            
+
         [HttpGet]
         public ActionResult Index()
         {
 
 
             // Lets see if the main site role exists
-					if (!Roles.RoleExists("Administrator"))
+            if (!Roles.RoleExists("Administrator"))
             {
                 return RedirectToAction("SetUpSite", "Account");
             }
@@ -37,27 +37,16 @@ namespace Template.Controllers
 
             var model = new HomeModel();
 
-						var parentItems = _ParentItemService.GetAllParentItem();
+            var parentItems = _ParentItemService.GetAllParentItem();
 
-						foreach (var item in parentItems)
+            foreach (var item in parentItems)
             {
                 var parentItem = new ParentItemModel();
-								parentItem.ParentItemid = item.ParentItemid;
-								parentItem.Name = item.Name;
 
-								foreach (var childItem in item.ChildItems)
-								{
-									
-									var newChildItem = new ChildItemModel();
-									newChildItem.ChildItemId = childItem.ChildItemId;
-									newChildItem.Name = childItem.Name;
+                parentItem = convertParentItemDomainObject(item);
 
-									parentItem.ChildItems.Add(newChildItem);
+                model.ParentItems.Add(parentItem);
 
-								}
-
-							  model.ParentItems.Add(parentItem);
-  
             }
 
             return View(model);
@@ -81,6 +70,7 @@ namespace Template.Controllers
             var parentItemModel = new ParentItemModel();
             parentItemModel.ParentItemid = parentItem.ParentItemid;
             parentItemModel.Name = parentItem.Name;
+            parentItemModel.Description = parentItem.Description;
 
             foreach (var childItem in parentItem.ChildItems)
             {

@@ -10,27 +10,31 @@ namespace Template.Domain
     {
         public virtual int ParentItemid { get; set; }
 
-				public virtual string Name { get; set; }
+		public virtual string Name { get; set; }
+
+        public virtual string Description { get; set; }
 
         public virtual IList<ChildItem> ChildItems { get; set; }
 
-        protected ParentItem(){
-    
+        protected ParentItem()
+        {
+
         }
 
         public ParentItem(string name)
         {
-					this.Name = name;
-					ChildItems = new List<ChildItem>();
+            this.Name = name;
+            ChildItems = new List<ChildItem>();
         }
 
 
-        public virtual void AddChildItem(ChildItem childitem) {
+        public virtual void AddChildItem(ChildItem childitem)
+        {
 
-					this.ChildItems.Add(childitem);
-          childitem.Parent = this;
-					
-		}
+            this.ChildItems.Add(childitem);
+            childitem.Parent = this;
+
+        }
 
 
       

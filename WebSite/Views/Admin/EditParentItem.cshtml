@@ -14,10 +14,12 @@
     @Html.ValidationSummary();
 
     @Html.HiddenFor(x => x.ParentItemid);
+    
     @Html.LabelFor(x => x.Name);
     @Html.TextBoxFor(x => x.Name);
  
-   
+    @Html.LabelFor(x => x.Description);
+    @Html.TextAreaFor(x => x.Description);
       
     <div class="control">
         <input type="submit" value="Edit Item" />
