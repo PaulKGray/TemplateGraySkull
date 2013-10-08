@@ -7,6 +7,9 @@
   body {
     background-color: #accecd;
   }
+  .mainheader .nav li {
+    line-height: 30px;
+  }
   .mainheader,
   #body,
   .mainfooter {

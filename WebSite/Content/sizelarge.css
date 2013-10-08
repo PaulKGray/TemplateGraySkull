@@ -7,9 +7,10 @@
   body {
     font-size: 1.2em;
     line-height: 1.4;
-  }
-  body {
     background-color: #b7ae9d;
+  }
+  .mainheader {
+    height: 50px;
   }
   .mainheader,
   #body,
@@ -21,7 +22,7 @@
     font-weight: 300;
   }
   p.bigText {
-    font-size: 2.5em;
+    font-size: 2em;
   }
   .ArticleSection {
     float: left;

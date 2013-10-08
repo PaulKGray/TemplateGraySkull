@@ -122,6 +122,9 @@ footer {
   box-sizing: border-box;
   font-size: .9em;
 }
+.mainfooter h3 {
+  text-align: left;
+}
 .mainfooter #footerlogo {
   float: right;
 }
@@ -642,6 +645,9 @@ table.responsive-table {
   body {
     background-color: #accecd;
   }
+  .mainheader .nav li {
+    line-height: 30px;
+  }
   .mainheader,
   #body,
   .mainfooter {
@@ -663,9 +669,10 @@ table.responsive-table {
   body {
     font-size: 1.2em;
     line-height: 1.4;
-  }
-  body {
     background-color: #b7ae9d;
+  }
+  .mainheader {
+    height: 50px;
   }
   .mainheader,
   #body,
@@ -677,7 +684,7 @@ table.responsive-table {
     font-weight: 300;
   }
   p.bigText {
-    font-size: 2.5em;
+    font-size: 2em;
   }
   .ArticleSection {
     float: left;

@@ -1,0 +1,27 @@
+﻿@model Template.Models.ParentItemModel
+
+  <section class="ArticleSection">
+
+<h1>@Model.Name</h1>
+
+<article class="standardarticle">
+
+	<header>
+		Description
+	</header>
+
+	<p>Will be description</p>
+	
+	@foreach (var item in Model.ChildItems)
+	{
+			@item.Name
+	}
+
+	<footer>
+		Controls
+	</footer>
+
+</article>
+
+	</section>
+

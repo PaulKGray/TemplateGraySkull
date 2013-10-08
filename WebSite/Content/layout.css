@@ -122,6 +122,9 @@ footer {
   box-sizing: border-box;
   font-size: .9em;
 }
+.mainfooter h3 {
+  text-align: left;
+}
 .mainfooter #footerlogo {
   float: right;
 }

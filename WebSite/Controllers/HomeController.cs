@@ -64,7 +64,7 @@ namespace Template.Controllers
         }
 
         [HttpGet]
-        public ActionResult ParentItemDetails(int id)
+        public ActionResult Details(int id)
         {
 
             var item = _ParentItemService.GetParentItem(id);

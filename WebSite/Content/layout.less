@@ -110,21 +110,25 @@ body, header, #body, footer
   /* .push must be the same height as footer */
   min-height: 142px; 
 }
-.mainfooter{
-    background-color:@Footer-Colour;
-	padding:10px;
-	padding-bottom:5px;
-	.boxshadow(0 3px 3px rgba(0,0,0,.05));
-    display:block;
+.mainfooter
+{
+    background-color: @Footer-Colour;
+    padding: 10px;
+    padding-bottom: 5px;
+    .boxshadow(0 3px 3px rgba(0,0,0,.05));
+    display: block;
     box-sizing: border-box;
-    font-size:.9em;
+    font-size: .9em;
 
-    
- #footerlogo
-        {
-            float:right;
-     }
+    h3
+    {
+        text-align: left;
+    }
 
+    #footerlogo
+    {
+        float: right;
+    }
 }
 
 .mainheader, #body, .mainfooter{
@@ -170,7 +174,6 @@ article
     {
         margin-bottom: @margin-bottom-standard;
         .boxshadow(0 3px 3px rgba(0,0,0,.5));
-
 
 
     }        
