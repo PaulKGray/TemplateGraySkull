@@ -20,6 +20,8 @@
 				<nav class="mainNav" >
                 <ul class="nav">
 
+									<img src="~/Images/BearLogo.png" alt="GrayBear" />
+
 
 
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -30,6 +32,26 @@
 										<li>@Html.ActionLink("Admin", "Index","Admin")</li>
 					 					<li>@Html.ActionLink("Users", "UserManagement","User")</li>
 					 
+									}
+
+
+									
+										@if (User.Identity.IsAuthenticated)
+									{
+
+									<li class="LoginLink">@Html.ActionLink("Log out","Logout","Account")</li>
+
+									}
+									else { 
+          
+
+          
+									<li class="LoginLink">@Html.ActionLink("Login", "Login", "Account")</li>
+									<li class="LoginLink">@Html.ActionLink("Register", "Register", "Account")</li>
+				
+	
+          
+                        
 									}
 
                 </ul>
@@ -51,29 +73,6 @@
 
 						
 
-						@if (User.Identity.IsAuthenticated)
-			{
-
-						<p>User @User.Identity.Name logged in
-
-							@Html.ActionLink("Log out","Logout","Account")
-
-						</p>
-			}
-			else { 
-          
-          <h3>
-            Create an account
-          </h3>
-          
-          <ul>
-              <li>@Html.ActionLink("Login", "Login", "Account")</li>
-              <li>@Html.ActionLink("Register", "Register", "Account")</li>
-          </ul>
-	
-          
-                        
-			}
 				
 
         </footer>

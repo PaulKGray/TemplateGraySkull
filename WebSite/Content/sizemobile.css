@@ -18,6 +18,9 @@
   header {
     height: 30px;
   }
+  .nav img {
+    float: left;
+  }
   .nav li {
     line-height: 30px;
   }

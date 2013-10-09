@@ -284,6 +284,8 @@
     <None Include="Content\lib.less" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\BearLogo.png" />
+    <Content Include="Images\GrayBear.jpg" />
     <Content Include="Images\GrayBear.png" />
     <Content Include="Images\Grayskull.jpg" />
     <Content Include="Scripts\vendor\jquery-1.9.1.min.js" />

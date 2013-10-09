@@ -47,6 +47,7 @@ body, header, #body, footer
 	.boxshadow(0 3px 3px rgba(0,0,0,.05));
 		display:block;
 		height:@header-height;
+ 
 }
 
 	.mainheader .mainNav{
@@ -57,39 +58,55 @@ body, header, #body, footer
 	display:inline-block;
     padding:5px;
     font-size:1em;
+        width: 100%;
 	}
 
-	.nav {
+.nav
+{
+    margin: 0px;
+
+
+    img
+    {
+        float: right;
+        margin-left: 10px;
+        margin-right:30px;
+    }
+
+    li a
+    {
+        text-decoration: none;
+        width: 100%;
+        display: block;
+        min-height: 100%;
+    }
+
+    li
+    {
+        padding: 0px;
+        padding-left: @leftright-padding;
+        padding-right: @leftright-padding;
+        float: left;
+        text-align: center;
+        display: block;
+        line-height: @header-height;
+        .background-color-animate(500ms)
+    }
+
+    .LoginLink
+    {
+        float: right;
+        margin-right: 20px;
+    }
 
 
 
-		margin:0px;
-
-		li a{
-			text-decoration: none;
-			width: 100%;
-			display: block;
-			min-height: 100%;
-		}
-
-		li{
-			padding:0px;
-			padding-left:@leftright-padding;
-            padding-right:@leftright-padding;
-			float:left;
-			text-align:center;
-			display:block;
-			line-height:@header-height;
-
-			.background-color-animate(500ms)
-
-		}
-		li:hover{
-			background-color:@nav-back;
-			.one-edge-shadow()
-		}
-
-	}
+    li:hover
+    {
+        background-color: @nav-back;
+        .one-edge-shadow()
+    }
+}
 
 
 #body{
@@ -100,7 +117,7 @@ body, header, #body, footer
     min-height: 100%;
     margin-bottom: -142px; 
     margin-top: -@header-height; 
-        box-sizing: border-box;
+    box-sizing: border-box;
 }
 #body:after {
   content: "";
