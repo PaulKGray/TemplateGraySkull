@@ -53,6 +53,7 @@ footer {
   height: 40px;
 }
 .mainheader .mainNav {
+  margin: 0px;
   margin-left: auto;
   margin-right: auto;
   max-width: 800px;
@@ -61,21 +62,24 @@ footer {
   font-size: 1em;
   width: 100%;
 }
-.nav {
-  margin: 0px;
+.mainheader .mainNav .nav {
+  margin: 0 0;
 }
-.nav img {
+.mainheader .mainNav .MobileNav {
+  display: none;
+}
+.mainheader .mainNav .logo {
   float: right;
   margin-left: 10px;
   margin-right: 30px;
 }
-.nav li a {
+.mainheader .mainNav li a {
   text-decoration: none;
   width: 100%;
   display: block;
   min-height: 100%;
 }
-.nav li {
+.mainheader .mainNav li {
   padding: 0px;
   padding-left: 5px;
   padding-right: 5px;
@@ -89,11 +93,11 @@ footer {
   -ms-transition: background-color 500ms linear, box-shadow 500ms;
   transition: background-color 500ms linear, box-shadow 500ms;
 }
-.nav .LoginLink {
+.mainheader .mainNav .LoginLink {
   float: right;
   margin-right: 20px;
 }
-.nav li:hover {
+.mainheader .mainNav li:hover {
   background-color: #b7ae9d;
   -webkit-box-shadow: 0 8px 6px -6px #000000;
   -moz-box-shadow: 0 8px 6px -6px #000000;
@@ -173,4 +177,22 @@ article footer {
   -ms-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   -o-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+}
+article .ArticleSection {
+  flex: auto;
+  -webkit-flex-flow: row;
+  -moz-flex-flow: row;
+  -ms-flex-flow: row;
+  -o-flex-flow: row;
+  -webkit-flex-pack: center;
+  /* <-- */
+
+  -moz-flex-pack: center;
+  -ms-flex-pack: center;
+  -o-flex-pack: center;
+  /* http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+
+}
+article .ArticleSection .standardarticle {
+  margin: 5px;
 }

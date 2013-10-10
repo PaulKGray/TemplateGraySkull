@@ -23,6 +23,7 @@ body {
     font-size: @font-size;
     line-height: 1.4;
     background-color:@backgroundColor1;
+    background: url('Images/background.jpg')
 		color:@FontColor;
 		margin: 0px;
 		padding: 0px;
@@ -42,71 +43,77 @@ body, header, #body, footer
 }
 
 
-.mainheader{
-    background-color:@Header-Colour;
-	.boxshadow(0 3px 3px rgba(0,0,0,.05));
-		display:block;
-		height:@header-height;
- 
-}
-
-	.mainheader .mainNav{
-	
-	margin-left:auto;
-	margin-right:auto;
-	max-width:@max-screen-width;
-	display:inline-block;
-    padding:5px;
-    font-size:1em;
-        width: 100%;
-	}
-
-.nav
+.mainheader
 {
-    margin: 0px;
+    background-color: @Header-Colour;
+    .boxshadow(0 3px 3px rgba(0,0,0,.05));
+    display: block;
+    height: @header-height;
 
-
-    img
+    .mainNav
     {
-        float: right;
-        margin-left: 10px;
-        margin-right:30px;
-    }
-
-    li a
-    {
-        text-decoration: none;
+        margin: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: @max-screen-width;
+        display: inline-block;
+        padding: 5px;
+        font-size: 1em;
         width: 100%;
-        display: block;
-        min-height: 100%;
-    }
 
-    li
-    {
-        padding: 0px;
-        padding-left: @leftright-padding;
-        padding-right: @leftright-padding;
-        float: left;
-        text-align: center;
-        display: block;
-        line-height: @header-height;
-        .background-color-animate(500ms)
-    }
+        .nav
+        {
+            margin: 0 0;
+        }
 
-    .LoginLink
-    {
-        float: right;
-        margin-right: 20px;
-    }
+        .MobileNav
+        {
+            display: none;
+        }
+
+        .logo
+        {
+            float: right;
+            margin-left: 10px;
+            margin-right: 30px;
+        }
+
+        li a
+        {
+            text-decoration: none;
+            width: 100%;
+            display: block;
+            min-height: 100%;
+        }
+
+        li
+        {
+            padding: 0px;
+            padding-left: @leftright-padding;
+            padding-right: @leftright-padding;
+            float: left;
+            text-align: center;
+            display: block;
+            line-height: @header-height;
+            .background-color-animate(500ms)
+        }
+
+        .LoginLink
+        {
+            float: right;
+            margin-right: 20px;
+        }
 
 
 
-    li:hover
-    {
-        background-color: @nav-back;
-        .one-edge-shadow()
+        li:hover
+        {
+            background-color: @nav-back;
+            .one-edge-shadow()
+        }
     }
 }
+
 
 
 #body{
@@ -160,6 +167,10 @@ section
 	
 }
 
+
+
+
+
 article
 {
     -webkit-transition: all 0.3s ease;
@@ -193,7 +204,26 @@ article
         .boxshadow(0 3px 3px rgba(0,0,0,.5));
 
 
-    }        
+    }    
+    
+      .ArticleSection {
+    flex: auto;
+    -webkit-flex-flow: row;
+    -moz-flex-flow: row;
+    -ms-flex-flow: row;
+    -o-flex-flow: row;
+    -webkit-flex-pack: center;
+    /* <-- */
+  
+    -moz-flex-pack: center;
+    -ms-flex-pack: center;
+    -o-flex-pack: center;
+    /* http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+  
+  }
+  .ArticleSection .standardarticle {
+    margin: 5px;
+  }    
     
   
 }

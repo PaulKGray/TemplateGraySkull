@@ -1,10 +1,19 @@
 ﻿@model Template.Models.HomeModel
 
-<h1>The Template Site</h1>
+<section class="HeaderSection">
+	<header>
+		<h1>Template GraySkull</h1>
+		<sub>By GrayBear</sub>
+	</header>
+	<article>
+		<div class="subTitle">
+			<p class="bigText">This template site from GrayBear is designed to allow you to get your ideas to market fast.</p>
+		</div>
 
-<p class="bigText">This template site from GrayBear is designed to allow you to get your ideas to market fast.</p>
-
- <p>The concept of data on this site is simple there is a parent item with child item.</p>
+		<p>The concept of data on this site is simple there is a parent item with child item.</p>
+	</article>
+</section>
+<br style="clear:both" />
 
    
 @using (Html.BeginForm("Index","Home", FormMethod.Post))
@@ -47,8 +56,6 @@
     }
 </section>
         
-    <p>This is a cheat at the moment</p>
-    
     
 }
 

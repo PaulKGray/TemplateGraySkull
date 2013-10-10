@@ -24,11 +24,38 @@
                 width: @max-screen-width;
     }
 
-	   h1
+
+    .HeaderSection
     {
-        font-size: 4em;
-        font-weight:300;
+        header
+        {
+            float:left;
+            background-color: @blue;
+            padding: 5px;
+            .boxshadow(0 3px 3px rgba(0,0,0,.5));
+
+            h1
+            {
+                font-size: 2em;
+                font-weight:300;
+                margin-bottom:2px;
+                margin-top:2px;
+           }
+
+            sub
+            {
+                font-family:Georgia, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+                text-align:right;
+ 
+            }
+        }
+
+        article
+        {
+        }
     }
+
+
        
     p.bigText{
      font-size:2em;
@@ -36,17 +63,7 @@
 
     .ArticleSection
     {
-        float:left;
-        flex: auto;
-	    -webkit-flex-flow: row;
-        -moz-flex-flow: row;
-        -ms-flex-flow: row;
-        -o-flex-flow: row;
-        -webkit-flex-pack: center; /* <-- */
-        -moz-flex-pack: center;
-        -ms-flex-pack: center;
-        -o-flex-pack: center;
-       /* http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+
     }
 
    .ArticleSection .standardarticle

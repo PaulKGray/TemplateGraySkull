@@ -18,6 +18,12 @@
   header {
     height: 30px;
   }
+  .mainheader .mainNav .MobileNav {
+    display: block;
+  }
+  .nav {
+    display: none;
+  }
   .nav img {
     float: left;
   }

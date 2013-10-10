@@ -25,7 +25,6 @@ input[type=button] {
   margin-top: 40px;
   line-height: 35px;
   color: #fafffc;
-  text-align: center;
   -webkit-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
@@ -55,6 +54,7 @@ input[type=button]:hover {
   -moz-transition: background-position 0.1s linear;
   -o-transition: background-position 0.1s linear;
   transition: background-position 0.1s linear;
+  border-bottom: solid 5px #000;
   -webkit-transition: background-color 250ms linear, box-shadow 250ms;
   -moz-transition: background-color 250ms linear, box-shadow 250ms;
   -o-transition: background-color 250ms linear, box-shadow 250ms;
