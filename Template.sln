@@ -16,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		WE-settings.xml = WE-settings.xml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraySkullApi", "GraySkullApi\GraySkullApi.csproj", "{CD4ECB1E-AB8D-4DD0-BC05-3E71A5B5BAA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{4FD34974-FB22-4D23-8842-9F6160BADF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FD34974-FB22-4D23-8842-9F6160BADF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FD34974-FB22-4D23-8842-9F6160BADF68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD4ECB1E-AB8D-4DD0-BC05-3E71A5B5BAA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD4ECB1E-AB8D-4DD0-BC05-3E71A5B5BAA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD4ECB1E-AB8D-4DD0-BC05-3E71A5B5BAA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD4ECB1E-AB8D-4DD0-BC05-3E71A5B5BAA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
