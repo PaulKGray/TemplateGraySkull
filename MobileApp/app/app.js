@@ -1,0 +1,44 @@
+﻿
+//more on directive http://docs.angularjs.org/guide/directive
+
+angular.module('components', [])
+	.directive('parentdetails', function () {
+		return {
+
+			restrict: 'E',
+			scope: {
+				parentname: '@parentname'
+
+			},
+			templateUrl: '/partials/parentDetails.html'
+
+		}
+
+	})
+
+
+angular.module('parentService',[])
+
+
+
+angular.module('MobileApp', ['components'])
+	.config(function ($routeProvider) {
+
+
+
+		$routeProvider.
+			when('/about', { templateUrl: '/partials/about.html' }).
+			when('/contact', { templateUrl: '/partials/contact.html' }).
+			otherwise({ redirectTo: '/home', templateUrl: '/partials/home.html' });
+	});
+
+function mainCtrl($scope, $location) {
+	$scope.setRoute = function (route) {
+		console.log(route);
+		$location.path(route);
+
+	}
+
+
+
+}

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html  class="no-js"> 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,20 +7,30 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 				<script type="text/javascript" src="scripts/angular.min.js"></script>
+				<script type="text/javascript" src="app/app.js"></script>
         <link rel="stylesheet" href="style/normalize.css">
         <link rel="stylesheet" href="style/main.css">
     </head>
-    <body>
+    <body ng-app="MobileApp" ng-controller="mainCtrl">
+
+			<header>
+				
+					<button  ng-click="setRoute('home')" class="btn">Home</button>
+					<button  ng-click="setRoute('about')" class="btn">About</button>
+					<button  ng-click="setRoute('contact')" class="btn">Contact</button>
+				
+
+			</header>
+
+			<div ng-view>
+
+
+			</div>
  
         <p>This is your mobile app</p>
 
-				
-		<div ng-app>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-    </div>
+
+			<parentdetails parentname="This is a parent name"></parentdetails>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
