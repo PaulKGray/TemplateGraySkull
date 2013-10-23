@@ -1,30 +1,7 @@
 ﻿
-//more on directive http://docs.angularjs.org/guide/directive
 
-angular.module('components', [])
-	.directive('parentdetails', function () {
-		return {
-
-			restrict: 'E',
-			scope: {
-				parentname: '@parentname'
-
-			},
-			templateUrl: '/partials/parentDetails.html'
-
-		}
-
-	})
-
-
-angular.module('parentService',[])
-
-
-
-angular.module('MobileApp', ['components'])
+var myApp = angular.module('MobileApp', ['components'])
 	.config(function ($routeProvider) {
-
-
 
 		$routeProvider.
 			when('/about', { templateUrl: '/partials/about.html' }).
