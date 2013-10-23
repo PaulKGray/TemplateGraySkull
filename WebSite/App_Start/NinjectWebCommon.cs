@@ -18,6 +18,7 @@ namespace Template.App_Start
     using Ninject.Web.Common;
     using Ninject;
     using System.Web.Mvc;
+	
 
 
     public static class NinjectWebCommon 
@@ -52,7 +53,9 @@ namespace Template.App_Start
             kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
             kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
             kernel.BindFilter<TransactionAttribute>(FilterScope.Action, 0).WhenActionMethodHas<TransactionAttribute>();
-            
+
+						System.Web.Http.GlobalConfiguration.Configuration.DependencyResolver = new NinjectDependencyResolver(kernel);
+
             RegisterServices(kernel);
             return kernel;
         }
