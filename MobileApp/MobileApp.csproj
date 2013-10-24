@@ -39,15 +39,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="app\controllers\" />
-    <Folder Include="app\directives\" />
-    <Folder Include="app\filters\" />
-    <Folder Include="app\services\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="partials\parentDetails.html" />
+    <Content Include="app\directives.js" />
+    <Content Include="app\services.js" />
+    <Content Include="partials\about.html" />
+    <Content Include="partials\contact.html" />
+    <Content Include="partials\home.html" />
+    <Content Include="partials\parentItem\details.html" />
     <Content Include="index.html" />
     <Content Include="scripts\angular-bootstrap-prettify.js" />
     <Content Include="scripts\angular-bootstrap-prettify.min.js" />

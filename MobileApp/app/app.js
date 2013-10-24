@@ -11,9 +11,7 @@ var myApp = angular.module('MobileApp', ['components'])
 
 function mainCtrl($scope, $location) {
 	$scope.setRoute = function (route) {
-		console.log(route);
 		$location.path(route);
-
 	}
 
 
