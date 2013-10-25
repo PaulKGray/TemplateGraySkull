@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
-    <Content Include="app\controllers\conrollers.js" />
     <Content Include="app\controllers\home.js" />
     <Content Include="app\controllers\login.js" />
     <Content Include="app\directives.js" />
