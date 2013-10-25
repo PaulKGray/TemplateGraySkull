@@ -2,7 +2,7 @@
 //more on directive http://docs.angularjs.org/guide/directive
 
 
-angular.module('components', [])
+angular.module('MobileApp.components', [])
 	.directive('parentdetails', function () {
 		return {
 

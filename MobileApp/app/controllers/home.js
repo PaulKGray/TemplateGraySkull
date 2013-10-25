@@ -1,11 +1,7 @@
-﻿function homeCtrl($scope, $location, Parent) {
-	$scope.setRoute = function (route) {
-		$location.path(route);
-	}
+﻿function homeCtrl($scope, Parent) {
 
 	$scope.search = function () {
 		$scope.parents = Parent.query();
-		console.log(Parent.query());
 	}
 
 	$scope.search();

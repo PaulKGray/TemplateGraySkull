@@ -1,16 +1,22 @@
 ﻿
 <h1>Login</h1>
 
+<!--Look into form validation and angular hooks-->
+
+<form ng-submit="login()">
+
 <div>
 <label for="username">Username</label>
-<input type="text" id="username" />
+<input type="text" id="username" required/>
 
 </div>
 
 <div>
 <label for="password">Password</label>
-<input type="password" id="password" />
+<input type="password" id="password" required/>
 </div>
 
 
-<input type="button" value="login" />
+<input type="submit"  value="login" />
+
+</form>

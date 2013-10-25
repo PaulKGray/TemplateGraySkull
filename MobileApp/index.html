@@ -12,21 +12,24 @@
 
 				<script type="text/javascript" src="app/directives.js"></script>
 				<script type="text/javascript" src="app/app.js"></script>
+
 				<script type="text/javascript" src="app/services/parentService.js"></script>
+
 				<script type="text/javascript" src="app/controllers/home.js"></script>
+				<script type="text/javascript" src="app/controllers/login.js"></script>
 
         <link rel="stylesheet" href="style/normalize.css">
         <link rel="stylesheet" href="style/main.css">
 
     </head>
-    <body ng-app="MobileApp" ng-controller="homeCtrl">
+    <body ng-app="MobileApp">
 
 			<header>
 				
-					<button  ng-click="setRoute('home')" class="btn">Home</button>
-					<button  ng-click="setRoute('about')" class="btn">About</button>
-					<button  ng-click="setRoute('contact')" class="btn">Contact</button>
-					<button  ng-click="setRoute('login')" class="btn">login</button>		
+					<a href="#/home" class="btn">Home</a>
+					<a href="#/about" class="btn">About</a>
+					<a href="#/contact" class="btn">Contact</a>
+					<a href="#/login" class="btn">login</a>		
 
 			</header>
 
