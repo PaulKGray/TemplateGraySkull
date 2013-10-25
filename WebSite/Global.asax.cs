@@ -34,6 +34,14 @@ namespace Template
                 Context.Items[Services.Registrations.NHibernateModule.SESSION_KEY] = null;
             }
         }
+				protected void Application_BeginRequest(object sender, EventArgs e)
+				{
+					if (Request.Headers.AllKeys.Contains("Origin") && Request.HttpMethod == "OPTIONS")
+					{
+						Response.StatusCode = 200;
+						Response.End();
+					}
+				}
     }
 
 

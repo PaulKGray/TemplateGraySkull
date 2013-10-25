@@ -1,4 +1,13 @@
 ﻿
-<h2>name {{parentname}}</h2>
+<h2>{{item.Name}}</h2>
 
-<p>And this is my description</p>
+<p>{{item.Description}}</p>
+
+<ul>
+	<li ng-repeat="child in item.ChildItems">
+		{{child.Name}}
+	</li>
+</ul>
+
+
+<a href="#" ng-click="OpenItem({{item.ParentItemid}})">Open Item</a>

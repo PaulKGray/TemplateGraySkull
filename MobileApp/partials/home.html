@@ -2,5 +2,14 @@
 
 <p>This is the home page</p>
 
+<div>
+	<input type="search" ng-model="searcher" />
+</div>
 
-<parentdetails parentname="This is a parent name"></parentdetails>
+<div ng-repeat="parent in parents | filter:searcher">
+
+	<div parentdetails="parent"></div>
+
+</div>
+
+

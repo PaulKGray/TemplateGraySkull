@@ -6,9 +6,9 @@ angular.module('components', [])
 	.directive('parentdetails', function () {
 		return {
 
-			restrict: 'E',
+			restrict: 'EA',
 			scope: {
-				parentname: '@parentname'
+				item: '=parentdetails'
 
 			},
 			templateUrl: '/partials/parentItem/details.html'
