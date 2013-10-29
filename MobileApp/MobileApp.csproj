@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\controllers\contactUs.js" />
+    <Content Include="app\controllers\header.js" />
     <Content Include="app\controllers\home.js" />
     <Content Include="app\controllers\login.js" />
     <Content Include="app\directives.js" />
@@ -356,8 +358,62 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
-    <Content Include="style\main.css" />
-    <Content Include="style\normalize.css" />
+    <None Include="style\lib.less" />
+    <Content Include="style\lib.css">
+      <DependentUpon>lib.less</DependentUpon>
+    </Content>
+    <Content Include="style\lib.min.css">
+      <DependentUpon>lib.less</DependentUpon>
+    </Content>
+    <None Include="style\main.less" />
+    <None Include="style\size-mobile.less" />
+    <None Include="style\normalize.less" />
+    <Content Include="style\main.css">
+      <DependentUpon>main.less</DependentUpon>
+    </Content>
+    <Content Include="style\main.min.css">
+      <DependentUpon>main.less</DependentUpon>
+    </Content>
+    <Content Include="style\mixins.css" />
+    <Content Include="style\mobile.css">
+      <DependentUpon>size-mobile.less</DependentUpon>
+    </Content>
+    <Content Include="style\mobile.min.css">
+      <DependentUpon>size-mobile.less</DependentUpon>
+    </Content>
+    <Content Include="style\normalize.css">
+      <DependentUpon>normalize.less</DependentUpon>
+    </Content>
+    <Content Include="style\normalize.min.css">
+      <DependentUpon>normalize.less</DependentUpon>
+    </Content>
+    <None Include="style\size-tablet.less" />
+    <None Include="style\size-large.less" />
+    <None Include="style\size-general.less" />
+    <Content Include="style\size-general.css">
+      <DependentUpon>size-general.less</DependentUpon>
+    </Content>
+    <Content Include="style\size-general.min.css">
+      <DependentUpon>size-general.less</DependentUpon>
+    </Content>
+    <Content Include="style\size-large.css">
+      <DependentUpon>size-large.less</DependentUpon>
+    </Content>
+    <Content Include="style\size-large.min.css">
+      <DependentUpon>size-large.less</DependentUpon>
+    </Content>
+    <Content Include="style\size-mobile.css">
+      <DependentUpon>size-mobile.less</DependentUpon>
+    </Content>
+    <Content Include="style\size-mobile.min.css">
+      <DependentUpon>size-mobile.less</DependentUpon>
+    </Content>
+    <Content Include="style\tablet.css">
+      <DependentUpon>size-tablet.less</DependentUpon>
+    </Content>
+    <Content Include="style\tablet.min.css">
+      <DependentUpon>size-tablet.less</DependentUpon>
+    </Content>
     <Content Include="web.config" />
     <Content Include="packages.config" />
     <None Include="web.Debug.config">

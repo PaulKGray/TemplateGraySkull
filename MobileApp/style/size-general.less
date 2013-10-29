@@ -1,0 +1,122 @@
+﻿
+body
+{
+    background-color:#18A4ED;
+    overflow: scroll
+}
+
+.appHolder
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+
+    .contentHolder
+    {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        background: #fff;
+
+        header
+        {
+            background-color: #222;
+            padding: 6px 8px 6px 8px;
+            line-height: 30px;
+
+            h1
+            {
+                color: #fff;
+                font-size: 20px;
+                margin: 0px;
+                text-align: center;
+            }
+
+            .navicon
+            {
+                float: right;
+                height: 4px;
+                width: 34px;
+                border-top: 14px double #FFF;
+                border-bottom: 5px solid #FFF;
+                font-size: 0;
+                margin-top: 3px;
+            }
+
+            a
+            {
+                color: #fff;
+            }
+        }
+
+        #menuHolder
+        {
+            background-color: #222;
+            box-shadow: 0 0 3px 0px rgba(0,0,0,0.3);
+            display: none;
+
+            ul
+            {
+                padding-left: 0px;
+                margin-top: 0;
+
+                li
+                {
+                    line-height: 30px;
+                    padding: 0px;
+                    clear: both;
+                    list-style: none;
+                    margin-left: 0px;
+                    border-bottom: solid 1px #666;
+
+                    a
+                    {
+                        display: block;
+                        background-color: #222;
+                        color: #fff;
+                        padding: 6px 0 6px 8px;
+                        text-decoration: none;
+                    }
+
+                        a:hover, a:focus
+                        {
+                            background-color: #fff;
+                            color: #333;
+                        }
+                }
+            }
+        }
+
+        .viewHolder
+        {
+            padding: 10px;
+
+            label
+            {
+                display: block;
+            }
+
+            input
+            {
+                width: 100%;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                padding:2px;
+            }
+
+                input[type="button"], input[type="reset"], input[type="submit"]
+                {
+                    width: 100%;
+                    background-color: #222;
+                    border: #333 solid 1px;
+                    margin-top: 10px;
+                    line-height: 30px;
+                    font-size: 20px;
+                    color: #fff;
+                }
+        }
+    }
+}
+
+

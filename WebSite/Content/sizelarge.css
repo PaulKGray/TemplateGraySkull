@@ -7,7 +7,7 @@
   body {
     font-size: 1.2em;
     line-height: 1.4;
-    background-color: #b7ae9d;
+    background-color: #18a4ed;
   }
   .mainheader {
     height: 50px;
@@ -19,7 +19,7 @@
   }
   .HeaderSection header {
     float: left;
-    background-color: #accecd;
+    background-color: #18a4ed;
     padding: 5px;
     -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);

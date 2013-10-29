@@ -7,9 +7,11 @@ var myApp = angular.module('MobileApp', [
 
 		$routeProvider.
 			when('/about', { templateUrl: '/partials/about.html' }).
-			when('/contact', { templateUrl: '/partials/contact.html' }).
+			when('/contact', { templateUrl: '/partials/contact.html', controller: 'contactUsCtrl' }).
 			when('/login', { templateUrl: '/partials/login.html', controller: 'loginCtrl' }).
 			otherwise({ redirectTo: '/home', templateUrl: '/partials/home.html', controller: 'homeCtrl' });
+
+
 	});
 
 

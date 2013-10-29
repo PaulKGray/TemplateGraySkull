@@ -17,27 +17,41 @@
 
 				<script type="text/javascript" src="app/controllers/home.js"></script>
 				<script type="text/javascript" src="app/controllers/login.js"></script>
+				<script type="text/javascript" src="app/controllers/header.js"></script>
+				<script type="text/javascript" src="app/controllers/contactUs.js"></script>
 
-        <link rel="stylesheet" href="style/normalize.css">
-        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/main.min.css">
 
     </head>
-    <body ng-app="MobileApp">
+    <body>
 
-			<header>
+			<div class="appHolder" ng-app="MobileApp">
+
+			<div class="contentHolder">
+
+				<header ng-controller="headerCtrl">   
+				<a class="navicon mtoggle" ng-click="navMenu($event)" href="#">MAIN MENU</a>
+				<h1>The App Name</h1>
+				</header>
 				
-					<a href="#/home" class="btn">Home</a>
-					<a href="#/about" class="btn">About</a>
-					<a href="#/contact" class="btn">Contact</a>
-					<a href="#/login" class="btn">login</a>		
+				<nav id="menuHolder">
+				<ul>
+				 <li><a href="#/home" class="btn">Home</a></li>
+				 <li><a href="#/about" class="btn">About</a></li>
+				 <li><a href="#/contact" class="btn">Contact</a></li>
+				 <li><a href="#/login" class="btn">login</a></li>						
+				</ul>
+				</nav>
 
-			</header>
-
-			<div ng-view>
+				<div class="viewHolder" ng-view>
 
 
-			</div>
+				</div>
  
+			</div>
+
+				
+			</div>
  
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -48,5 +62,7 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
+
+
     </body>
 </html>

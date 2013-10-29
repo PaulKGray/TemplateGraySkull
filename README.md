@@ -81,3 +81,7 @@ Use these to help you design your site
 ![alt tag](https://raw.github.com/PaulKGray/TemplateGraySkull/master/WebSite/Images/GrayBear.jpg)
 
 
+where to get your photos
+
+-http://nos.twnsnd.co/ free old photos out of copywrite.
+

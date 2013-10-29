@@ -5,7 +5,7 @@
 /* Smartphones (portrait) ----------- */
 @media all and (max-width: 650px) and (min-width: 0px) {
   body {
-    background-color: #bc6367;
+    background-color: #18a4ed;
   }
   .mainheader,
   #body,
@@ -32,7 +32,7 @@
   }
   article header,
   article footer {
-    background-color: #accecd;
+    background-color: #18a4ed;
   }
   p.bigText {
     padding-left: 5px;
