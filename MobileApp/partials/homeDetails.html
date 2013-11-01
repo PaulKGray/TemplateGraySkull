@@ -1,0 +1,23 @@
+﻿<h2>Home page</h2>
+
+<p>This is the home page</p>
+
+<div>
+	<label for="search">Search</label>
+	<input id="search" type="search" ng-model="searcher" />
+</div>
+
+<section>
+
+	<article ng-repeat="parent in parents | filter:searcher">
+
+		<div parentdetails="parent"></div>
+		
+		<a href="#" ng-click="OpenItem(parent.ParentItemid)">Open Item</a>
+
+	</article>
+
+
+</section>
+
+

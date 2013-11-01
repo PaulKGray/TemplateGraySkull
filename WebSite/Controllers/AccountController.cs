@@ -59,6 +59,41 @@ namespace Template.Controllers
 				
 				}
 
+
+				public ActionResult ForgotPassword(ForgotPasswordViewModel model)
+				{
+
+
+					if (ModelState.IsValid)
+					{
+
+						MembershipUser user = Membership.GetUser(User.Identity);
+						string newpassword = "RandomString";
+						user.ChangePassword(user.ResetPassword(), newpassword);
+
+						// Send the link
+
+						//https://github.com/NickJosevski/mailzor
+
+						// Reset the login
+
+						return RedirectToAction("Index", "Home");
+
+					}
+					else
+					{
+
+						return View(model);
+
+					}
+
+
+
+
+
+				}
+
+
         [HttpGet]
                 public ActionResult Register() {
 
@@ -119,6 +154,7 @@ namespace Template.Controllers
 			
 				
 				}
+
 
 
 
