@@ -4,9 +4,6 @@
 /* Layout and positioning ----------- */
 /* Tablets ----------- */
 @media all and (max-width: 800px) and (min-width: 650px) {
-  body {
-    background-color: #18a4ed;
-  }
   .mainheader {
     height: 50px;
   }

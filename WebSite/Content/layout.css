@@ -3,7 +3,7 @@
 /* Screen Widths ----------- */
 /* Layout and positioning ----------- */
 html {
-  background-color: #b7ae9d;
+  background-color: #18a4ed;
   min-height: 100%;
 }
 html,
@@ -19,7 +19,7 @@ textarea {
 body {
   font-size: 1em;
   line-height: 1.4;
-  background-color: #b7ae9d;
+  background-color: #18a4ed;
   color: #fafffc;
   margin: 0px;
   padding: 0px;

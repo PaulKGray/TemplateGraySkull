@@ -4,9 +4,6 @@
 /* Layout and positioning ----------- */
 /* Smartphones (portrait) ----------- */
 @media all and (max-width: 650px) and (min-width: 0px) {
-  body {
-    background-color: #18a4ed;
-  }
   .mainheader,
   #body,
   .mainfooter {

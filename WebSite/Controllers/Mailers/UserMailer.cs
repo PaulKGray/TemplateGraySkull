@@ -1,4 +1,5 @@
 using Mvc.Mailer;
+using Template.Models.Account;
 
 namespace Template.Controllers.Mailers
 { 
@@ -20,7 +21,7 @@ namespace Template.Controllers.Mailers
 			});
 		}
  
-		public virtual MvcMailMessage PasswordReset()
+		public virtual MvcMailMessage PasswordReset(ForgotPasswordViewModel model)
 		{
 			//ViewBag.Data = someObject;
 			return Populate(x =>
