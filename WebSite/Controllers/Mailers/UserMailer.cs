@@ -1,6 +1,6 @@
 using Mvc.Mailer;
 
-namespace Template.Domain.Mailers
+namespace Template.Controllers.Mailers
 { 
     public class UserMailer : MailerBase, IUserMailer 	
 	{
