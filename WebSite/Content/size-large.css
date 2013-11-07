@@ -8,23 +8,13 @@
     font-size: 1.2em;
     line-height: 1.4;
   }
-  .mainheader {
-    height: 50px;
-  }
   .mainheader,
   #body,
   .mainfooter {
     width: 800px;
   }
   .HeaderSection header {
-    float: left;
-    background-color: #18a4ed;
-    padding: 5px;
-    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    -ms-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    -o-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+    padding: 10px;
   }
   .HeaderSection header h1 {
     font-size: 2em;

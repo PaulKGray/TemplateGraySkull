@@ -194,6 +194,8 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\API\ParentAPIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Mailers\ForgotPasswordMailer.cs" />
+    <Compile Include="Controllers\Mailers\IForgotPasswordMailer.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -216,6 +218,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Content\fonts.less" />
+    <Content Include="Content\extra.css">
+      <DependentUpon>extras.less</DependentUpon>
+    </Content>
+    <Content Include="Content\extra.min.css">
+      <DependentUpon>extras.less</DependentUpon>
+    </Content>
     <Content Include="Content\fonts.css">
       <DependentUpon>fonts.less</DependentUpon>
     </Content>
@@ -226,9 +234,9 @@
       <DependentUpon>forms.less</DependentUpon>
     </Content>
     <Content Include="Content\forms.less" />
-    <None Include="Content\main.less" />
-    <None Include="Content\sizemed.less" />
-    <None Include="Content\sizemobile.less" />
+    <None Include="Content\extras.less" />
+    <None Include="Content\size-tablet.less" />
+    <None Include="Content\size-mobile.less" />
     <None Include="Content\mixins.less" />
     <None Include="Content\layout.less" />
     <Content Include="Content\forms.min.css">
@@ -246,12 +254,6 @@
     <Content Include="Content\lib.min.css">
       <DependentUpon>lib.less</DependentUpon>
     </Content>
-    <Content Include="Content\main.css">
-      <DependentUpon>main.less</DependentUpon>
-    </Content>
-    <Content Include="Content\main.min.css">
-      <DependentUpon>main.less</DependentUpon>
-    </Content>
     <Content Include="Content\master.css">
       <DependentUpon>master.less</DependentUpon>
     </Content>
@@ -266,23 +268,23 @@
     </Content>
     <Content Include="Content\normalize.css" />
     <None Include="Content\tables.less" />
-    <Content Include="Content\sizelarge.css">
-      <DependentUpon>sizelarge.less</DependentUpon>
+    <Content Include="Content\size-large.css">
+      <DependentUpon>size-large.less</DependentUpon>
     </Content>
-    <Content Include="Content\sizelarge.min.css">
-      <DependentUpon>sizelarge.less</DependentUpon>
+    <Content Include="Content\size-large.min.css">
+      <DependentUpon>size-large.less</DependentUpon>
     </Content>
-    <Content Include="Content\sizemed.css">
-      <DependentUpon>sizemed.less</DependentUpon>
+    <Content Include="Content\size-mobile.css">
+      <DependentUpon>size-mobile.less</DependentUpon>
     </Content>
-    <Content Include="Content\sizemed.min.css">
-      <DependentUpon>sizemed.less</DependentUpon>
+    <Content Include="Content\size-mobile.min.css">
+      <DependentUpon>size-mobile.less</DependentUpon>
     </Content>
-    <Content Include="Content\sizemobile.css">
-      <DependentUpon>sizemobile.less</DependentUpon>
+    <Content Include="Content\size-tablet.css">
+      <DependentUpon>size-tablet.less</DependentUpon>
     </Content>
-    <Content Include="Content\sizemobile.min.css">
-      <DependentUpon>sizemobile.less</DependentUpon>
+    <Content Include="Content\size-tablet.min.css">
+      <DependentUpon>size-tablet.less</DependentUpon>
     </Content>
     <Content Include="Content\tables.css">
       <DependentUpon>tables.less</DependentUpon>
@@ -333,7 +335,7 @@
     <Content Include="Views\Admin\EditParentItem.cshtml" />
     <Content Include="Views\Account\SetUpSite.cshtml" />
     <Content Include="Views\User\UserManagement.cshtml" />
-    <Content Include="Content\sizelarge.less" />
+    <Content Include="Content\size-large.less" />
     <Content Include="Content\master.less" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />

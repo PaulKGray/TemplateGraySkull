@@ -14,13 +14,13 @@ textarea {
   color: #222;
 }
 .content-wrapper {
-  margin-top: 50px;
+  background-color: #fff;
 }
 body {
   font-size: 1em;
   line-height: 1.4;
   background-color: #18a4ed;
-  color: #fafffc;
+  color: #333333;
   margin: 0px;
   padding: 0px;
   min-height: 100%;
@@ -50,7 +50,11 @@ footer {
   -o-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
   display: block;
-  height: 40px;
+  height: auto;
+}
+.mainheader h1 {
+  float: left;
+  text-align: center;
 }
 .mainheader .mainNav {
   margin: 0px;
@@ -86,7 +90,7 @@ footer {
   float: left;
   text-align: center;
   display: block;
-  line-height: 40px;
+  line-height: auto;
   -webkit-transition: background-color 500ms linear, box-shadow 500ms;
   -moz-transition: background-color 500ms linear, box-shadow 500ms;
   -o-transition: background-color 500ms linear, box-shadow 500ms;
@@ -110,7 +114,6 @@ footer {
   margin-right: auto;
   min-height: 100%;
   margin-bottom: -142px;
-  margin-top: -40px;
   box-sizing: border-box;
 }
 #body:after {
@@ -160,10 +163,15 @@ article {
 }
 article header,
 article footer {
-  background-color: #bc6367;
+  background-color: #333333;
+  color: #fafffc;
   line-height: 30px;
   padding-left: 5px;
   padding-right: 5px;
+}
+article header a,
+article footer a {
+  color: #fafffc;
 }
 article .content {
   background-color: #fafffc;
@@ -201,7 +209,7 @@ article .ArticleSection .standardarticle {
 /* Screen Widths ----------- */
 /* Layout and positioning ----------- */
 a {
-  color: #fafffc;
+  color: #333333;
 }
 p.bigText {
   margin-top: 10px;
@@ -210,20 +218,16 @@ p.bigText {
   line-height: 1.2em;
   font-size: 1.6em;
   font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial Black', 'Arial', San-serif;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   letter-spacing: -1px;
-  text-transform: capitalize;
-  text-align: justify;
-  transition: font 500ms ease;
-  color: white;
   text-align: center;
+  color: #333333;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-  color: #fafffc;
+  color: #333333;
   margin: 0px;
   padding: 0px;
   text-align: center;
@@ -231,7 +235,9 @@ h5 {
 h1 {
   font-size: 2em;
   font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial Black', 'Arial', San-serif;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.mainheader h1 {
+  font-size: 1em;
   color: #fafffc;
 }
 /* Typeology ----------- */
@@ -260,12 +266,12 @@ input[type=button] {
   width: 100%;
   margin-top: 40px;
   line-height: 35px;
-  color: #fafffc;
+  color: #333333;
   -webkit-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   vertical-align: middle;
   cursor: pointer;
-  background-color: #8a151b;
+  background-color: #333333;
   border: 1px solid #cccccc;
   border-color: #333 #333 #ccc;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -283,9 +289,9 @@ input[type=submit]:hover,
 input[type=submit]:focus,
 input[type=button]:focus,
 input[type=button]:hover {
-  color: #fafffc;
+  color: #333333;
   text-decoration: none;
-  background-color: #18a4ed;
+  background-color: #000000;
   -webkit-transition: background-position 0.1s linear;
   -moz-transition: background-position 0.1s linear;
   -o-transition: background-position 0.1s linear;
@@ -409,9 +415,6 @@ table.responsive-table {
 /* Layout and positioning ----------- */
 /* Smartphones (portrait) ----------- */
 @media all and (max-width: 650px) and (min-width: 0px) {
-  body {
-    background-color: #18a4ed;
-  }
   .mainheader,
   #body,
   .mainfooter {
@@ -435,10 +438,6 @@ table.responsive-table {
   .nav li {
     line-height: 30px;
   }
-  article header,
-  article footer {
-    background-color: #18a4ed;
-  }
   p.bigText {
     padding-left: 5px;
     padding-right: 5px;
@@ -450,9 +449,6 @@ table.responsive-table {
 /* Layout and positioning ----------- */
 /* Tablets ----------- */
 @media all and (max-width: 800px) and (min-width: 650px) {
-  body {
-    background-color: #18a4ed;
-  }
   .mainheader {
     height: 50px;
   }
@@ -460,9 +456,6 @@ table.responsive-table {
   #body,
   .mainfooter {
     width: 650px;
-  }
-  h1 {
-    font-size: 4em;
   }
   p.bigText {
     font-size: 2.5em;
@@ -477,10 +470,6 @@ table.responsive-table {
   body {
     font-size: 1.2em;
     line-height: 1.4;
-    background-color: #18a4ed;
-  }
-  .mainheader {
-    height: 50px;
   }
   .mainheader,
   #body,
@@ -488,14 +477,7 @@ table.responsive-table {
     width: 800px;
   }
   .HeaderSection header {
-    float: left;
-    background-color: #18a4ed;
-    padding: 5px;
-    -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    -ms-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    -o-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+    padding: 10px;
   }
   .HeaderSection header h1 {
     font-size: 2em;

@@ -16,7 +16,7 @@ textarea {
 
 .content-wrapper
 {
-    margin-top:50px;
+    background-color:#fff;
 }
 
 body {
@@ -48,6 +48,12 @@ body, header, #body, footer
     .boxshadow(0 3px 3px rgba(0,0,0,.05));
     display: block;
     height: @header-height;
+
+    h1
+    {
+        float:left;
+        text-align:center;
+    }
 
     .mainNav
     {
@@ -122,7 +128,6 @@ body, header, #body, footer
 	margin-right:auto;
     min-height: 100%;
     margin-bottom: -142px; 
-    margin-top: -@header-height; 
     box-sizing: border-box;
 }
 #body:after {
@@ -181,10 +186,16 @@ article
 
     header, footer
     {
-        background-color: @Pink;
+        background-color: @articleHeaderFooterBG;
+        color: @articleHeaderFooterColour;
         line-height: @header-cell-height;
         padding-left: @leftright-padding;
         padding-right: @leftright-padding;
+    }
+
+    header a, footer a
+    {
+        color: @articleHeaderFooterColour;
     }
 
     .content
@@ -201,29 +212,26 @@ article
     {
         margin-bottom: @margin-bottom-standard;
         .boxshadow(0 3px 3px rgba(0,0,0,.5));
+    }
 
+    .ArticleSection
+    {
+        flex: auto;
+        -webkit-flex-flow: row;
+        -moz-flex-flow: row;
+        -ms-flex-flow: row;
+        -o-flex-flow: row;
+        -webkit-flex-pack: center;
+        /* <-- */
+        -moz-flex-pack: center;
+        -ms-flex-pack: center;
+        -o-flex-pack: center;
+        /* http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
+    }
 
-    }    
-    
-      .ArticleSection {
-    flex: auto;
-    -webkit-flex-flow: row;
-    -moz-flex-flow: row;
-    -ms-flex-flow: row;
-    -o-flex-flow: row;
-    -webkit-flex-pack: center;
-    /* <-- */
-  
-    -moz-flex-pack: center;
-    -ms-flex-pack: center;
-    -o-flex-pack: center;
-    /* http://www.barrelny.com/blog/text-align-justify-and-rwd/ */
-  
-  }
-  .ArticleSection .standardarticle {
-    margin: 5px;
-  }    
-    
-  
+        .ArticleSection .standardarticle
+        {
+            margin: 5px;
+        }
 }
  
