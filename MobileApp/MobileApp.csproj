@@ -358,16 +358,16 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
-    <None Include="style\lib.less" />
     <Content Include="style\lib.css">
       <DependentUpon>lib.less</DependentUpon>
     </Content>
-    <Content Include="style\lib.min.css">
-      <DependentUpon>lib.less</DependentUpon>
-    </Content>
+    <Content Include="style\lib.less" />
     <None Include="style\main.less" />
     <None Include="style\size-mobile.less" />
     <None Include="style\normalize.less" />
+    <Content Include="style\lib.min.css">
+      <DependentUpon>lib.less</DependentUpon>
+    </Content>
     <Content Include="style\main.css">
       <DependentUpon>main.less</DependentUpon>
     </Content>

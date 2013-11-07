@@ -2,7 +2,7 @@
 @import "mixins";
 
 html{
-	background-color:@backgroundColor1;
+	background-color:@backgroundColour;
 	min-height:100%;
 }
 
@@ -22,8 +22,8 @@ textarea {
 body {
     font-size: @font-size;
     line-height: 1.4;
-    background-color:@backgroundColor1;
-		color:@FontColor;
+    background-color:@backgroundColour;
+		color:@FontColour;
 		margin: 0px;
 		padding: 0px;
         	min-height:100%;
@@ -44,15 +44,16 @@ body, header, #body, footer
 
 .mainheader
 {
-    background-color: @Header-Colour;
+    background-color: @Header-BackGround;
+    color:@Header-Colour;
     .boxshadow(0 3px 3px rgba(0,0,0,.05));
     display: block;
     height: @header-height;
 
     h1
     {
-        float:left;
         text-align:center;
+        display:block;
     }
 
     .mainNav
@@ -62,7 +63,7 @@ body, header, #body, footer
         margin-right: auto;
         max-width: @max-screen-width;
         display: inline-block;
-        padding: 5px;
+        padding: @element-padding;
         font-size: 1em;
         width: 100%;
 
@@ -71,16 +72,28 @@ body, header, #body, footer
             margin: 0 0;
         }
 
-        .MobileNav
+        .navicon
         {
-            display: none;
+        float: right;
+        height: 4px;
+        width: 34px;
+        border-top: 14px double @Header-Colour;
+        border-bottom: 5px solid @Header-Colour;
+        font-size: 0;
+        margin-top: 3px;
+        display: none;
+        }
+
+        .mobilename
+        {
+            display:none;
         }
 
         .logo
         {
-            float: right;
+            float: left;
             margin-left: 10px;
-            margin-right: 30px;
+            margin-right: 10px;
         }
 
         li a
@@ -89,6 +102,7 @@ body, header, #body, footer
             width: 100%;
             display: block;
             min-height: 100%;
+            color:@Header-Colour;
         }
 
         li
@@ -109,11 +123,8 @@ body, header, #body, footer
             margin-right: 20px;
         }
 
-
-
         li:hover
         {
-            background-color: @nav-back;
             .one-edge-shadow()
         }
     }
@@ -140,11 +151,13 @@ body, header, #body, footer
 }
 .mainfooter
 {
-    background-color: @Footer-Colour;
-    padding: 10px;
-    padding-bottom: 5px;
+    background-color: @Footer-BackGround;
+    color: @Footer-Colour;
+    padding: @element-padding;
     .boxshadow(0 3px 3px rgba(0,0,0,.05));
     display: block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: .9em;
 
@@ -166,8 +179,7 @@ body, header, #body, footer
 
 section
 {
-	width:100%;
-	
+	display:block;
 	
 }
 
@@ -177,10 +189,11 @@ section
 
 article
 {
-    -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
     margin-bottom: 5px;
 
 
@@ -193,17 +206,16 @@ article
         padding-right: @leftright-padding;
     }
 
-    header a, footer a
-    {
-        color: @articleHeaderFooterColour;
-    }
+        header a, footer a
+        {
+            color: @articleHeaderFooterColour;
+        }
 
     .content
     {
-        padding: 5px;
+        padding: @element-padding;
         background-color: @table-cell;
         color: @table-cell-color;
-        padding: @leftright-padding;
     }
 
 
@@ -216,11 +228,13 @@ article
 
     .ArticleSection
     {
+        -ms-flex: auto;
         flex: auto;
         -webkit-flex-flow: row;
         -moz-flex-flow: row;
         -ms-flex-flow: row;
         -o-flex-flow: row;
+        flex-flow: row;
         -webkit-flex-pack: center;
         /* <-- */
         -moz-flex-pack: center;

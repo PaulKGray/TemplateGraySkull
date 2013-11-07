@@ -15,14 +15,16 @@
   header {
     height: 30px;
   }
-  .mainheader .mainNav .MobileNav {
+  .mainheader .mainNav .navicon {
+    display: block;
+    float: right;
+    margin-right: 20px;
+  }
+  .mainheader .mainNav .mobilename {
     display: block;
   }
   .nav {
     display: none;
-  }
-  .nav img {
-    float: left;
   }
   .nav li {
     line-height: 30px;

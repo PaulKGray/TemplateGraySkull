@@ -8,6 +8,9 @@
     font-size: 1.2em;
     line-height: 1.4;
   }
+  .mainheader .mobilename {
+    display: none;
+  }
   .mainheader,
   #body,
   .mainfooter {

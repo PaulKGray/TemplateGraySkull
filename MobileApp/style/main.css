@@ -537,9 +537,14 @@ textarea {
   color: #000;
   padding: 0.2em 0;
 }
+/* Typeology ----------- */
+/* Colours ----------- */
+/* Screen Widths ----------- */
+/* Layout and positioning ----------- */
 body {
-  background-color: #18A4ED;
+  background-color: #18a4ed;
   overflow: scroll;
+  color: #333333;
 }
 .appHolder {
   margin-left: 10px;
@@ -553,12 +558,13 @@ body {
   background: #fff;
 }
 .appHolder .contentHolder header {
-  background-color: #222;
+  background-color: #333333;
   padding: 6px 8px 6px 8px;
   line-height: 30px;
+  color: #333333;
 }
 .appHolder .contentHolder header h1 {
-  color: #fff;
+  color: #333333;
   font-size: 20px;
   margin: 0px;
   text-align: center;
@@ -573,10 +579,10 @@ body {
   margin-top: 3px;
 }
 .appHolder .contentHolder header a {
-  color: #fff;
+  color: #333333;
 }
 .appHolder .contentHolder #menuHolder {
-  background-color: #222;
+  background-color: #333333;
   box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.3);
   display: none;
 }
@@ -628,6 +634,14 @@ body {
   font-size: 20px;
   color: #fff;
 }
+.appHolder .contentHolder footer {
+  background-color: #333333;
+  color: #333333;
+}
+/* Typeology ----------- */
+/* Colours ----------- */
+/* Screen Widths ----------- */
+/* Layout and positioning ----------- */
 @media all and (max-width: 500px) and (min-width: 0px) {
   
 }

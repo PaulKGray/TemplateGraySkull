@@ -7,6 +7,9 @@
   .mainheader {
     height: 50px;
   }
+  .mainheader .mobilename {
+    display: none;
+  }
   .mainheader,
   #body,
   .mainfooter {
