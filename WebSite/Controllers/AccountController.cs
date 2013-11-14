@@ -138,7 +138,7 @@ namespace Template.Controllers
 
 							FormsAuthentication.SetAuthCookie(model.AdminUsername, true);
 
-							return RedirectToAction("ShowAllUsers");
+                            return RedirectToAction("UserManagement");
 
 						}
 
